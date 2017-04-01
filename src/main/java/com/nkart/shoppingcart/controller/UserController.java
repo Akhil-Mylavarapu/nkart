@@ -21,7 +21,7 @@ public class UserController
 	@Autowired
 	private UserDAO userDAO;
  
-	@RequestMapping(value = "/create_user", method = RequestMethod.POST)
+	@RequestMapping(value = "/Registration", method = RequestMethod.POST)
 	public String registerUser(@ModelAttribute User user,Model model) {
 		log.debug("Starting of the method registerUser");
 		/* ModelAndView mv = new ModelAndView("Home");*/
@@ -37,7 +37,7 @@ public class UserController
 			/*mv.addObject("errorMessage", "User exist with this id");*/
 		}
 		log.debug("Ending of the method registerUser");
-		return "/Home";
+		return "/Login";
 	}
 	
 

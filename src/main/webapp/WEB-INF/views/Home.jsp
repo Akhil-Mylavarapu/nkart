@@ -4,7 +4,9 @@
 <html>
 <head>
 
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+ <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+      <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>NKART Home Page</title>
 
@@ -20,11 +22,11 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <body>
 	<script>
-		document.body.style.backgroundImage = "url('resources/Images/game.jpg')"
+		document.body.style.backgroundImage = "url('resources/images/game.jpg')"
 	</script>
 	<center>
 		<img class="img-circle"
-			src="<c:url value="/resources/Images/background-5.jpg"></c:url>"
+			src="<c:url value="/resources/images/background-5.jpg"></c:url>"
 			alt="ShoppingCartPic" width="100px" height="80px" align="left">
 	</center>
 	<div>
@@ -71,6 +73,30 @@
 	<c:if test="${isUserClickedCart == true}">
 		<jsp:include page="Cart.jsp"></jsp:include>
 	</c:if>
+	<c:forEach items="${productList}" var="product">
+			<tr>
+
+
+				<td>
+					<!-- --<div class="thumbnail">-->
+					<div class="col-md-4">
+						<a href="ShowProduct/${product.id}"> <img height="150px"
+							width="150px" alt="${product.id }"
+							src="<c:url value="/resources/images/${product.id }.jpg"></c:url>"></a>
+
+						<td><c:url var="action" value="addtocart/${product.id}"></c:url>
+							<form:form action="${action}" modelAttribute="cart">
+								<td id="td1"><c:out value="${product.name}" /><br>
+								<td id="td1"><c:out value="${product.price}" /> <input
+									type="submit" class="btn btn-primary" value="Add To Cart" /><br>
+							</form:form></td>
+						<br>
+
+					</div>
+			
+			</td>
+			</tr>
+		</c:forEach>
 
 
 

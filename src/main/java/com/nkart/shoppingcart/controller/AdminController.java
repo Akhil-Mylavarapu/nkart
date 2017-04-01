@@ -36,8 +36,7 @@ public class AdminController {
 
 	// define 3 methods
 	@RequestMapping("manage_Category")
-	public ModelAndView manageCategories(@ModelAttribute("category") Category category, BindingResult result,
-			Model model) {
+	public ModelAndView manageCategories(@ModelAttribute("category") Category category, BindingResult result,Model model) {
 		log.debug("Starting of the method manageCategories");
 		ModelAndView mv = new ModelAndView("/Admin/AdminHome");
 		// to access category domain object in category.jsp
@@ -77,6 +76,7 @@ public class AdminController {
 		return modelAndView;
 	}
 	
+
 	@RequestMapping("/manage_ProductsEdit")
 	public ModelAndView manageProductsEdit() {
 

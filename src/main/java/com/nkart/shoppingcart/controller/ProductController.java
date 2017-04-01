@@ -1,5 +1,11 @@
 package com.nkart.shoppingcart.controller;
 
+import java.io.File;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+import javax.servlet.http.HttpServletRequest;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +16,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.nkart.shoppingcart.dao.ProductDAO;
@@ -24,18 +31,37 @@ public class ProductController {
 
 	@Autowired
 	private Product product;
+	
+	private Path path;
 
 	@PostMapping("/manage_create_product")
-	public String createProduct(@ModelAttribute("product") Product product, Model model) {
+	public String createProduct(@ModelAttribute("product") Product product, HttpServletRequest request,Model model) {
 		log.debug(" Starting of the method createProduct");
-		log.info("id:" + product.getId());
-
+		
 		if (productDAO.createProduct(product) == true) {
 			model.addAttribute("Message", "Successfully Created the Product");
-			System.err.println("---------------------"+product.getName().hashCode());
+		
 		} else {
 			model.addAttribute("Message", "Product Not Created");
 		}
+		
+		
+		
+		MultipartFile file=product.getImage();
+		String rootDirectory = request.getSession().getServletContext().getRealPath("/");
+		System.out.println("Root: "+rootDirectory);
+        path = Paths.get(rootDirectory + "\\resources\\images\\"+product.getId()+".jpg");
+        if (file != null && !file.isEmpty()) {
+            try {
+            	System.out.println("Image Saving Start");
+            	file.transferTo(new File(path.toString()));
+            	System.out.println("Image Saved");
+            } catch (Exception e) {
+                e.printStackTrace();
+                System.out.println("Error");
+                throw new RuntimeException("item image saving failed.", e);
+            }
+        }
 		model.addAttribute("product", product);
 		
 		model.addAttribute("productList", productDAO.getAllProducts());
@@ -69,11 +95,26 @@ public class ProductController {
 		log.debug("Ending of the method editProduct");
 		return "redirect:/manage_ProductsEdit";
 	}
+	
 	@RequestMapping(value="/manage_Update_product")
-	public String updateCategory(@ModelAttribute("product") Product product)
+	public String updateCategory(@ModelAttribute("product") Product product,HttpServletRequest request)
 	{
 		
 		productDAO.updateProduct(product);
+		MultipartFile file=product.getImage();
+		String rootDirectory = request.getSession().getServletContext().getRealPath("/");
+        path = Paths.get(rootDirectory + "\\resources\\images\\"+product.getId()+".jpg");
+        if (file != null && !file.isEmpty()) {
+            try {
+            	System.out.println("Image Saving Start");
+            	file.transferTo(new File(path.toString()));
+            	System.out.println("Image Saved");
+            } catch (Exception e) {
+                e.printStackTrace();
+                System.out.println("Error");
+                throw new RuntimeException("item image saving failed.", e);
+            }
+        }
 		return "redirect:/manage_Products";
 	
 	}
