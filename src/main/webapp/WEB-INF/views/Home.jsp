@@ -26,7 +26,7 @@
 	</script>
 	<center>
 		<img class="img-circle"
-			src="<c:url value="/resources/images/background-5.jpg"></c:url>"
+			src="<c:url value="resources/images/background-5.jpg"></c:url>"
 			alt="ShoppingCartPic" width="100px" height="80px" align="left">
 	</center>
 	<div>

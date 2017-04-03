@@ -82,10 +82,10 @@
 			<table class="tg" border="2">
 				<thead>
 					<tr>
-						<td style="color: white">ID</td>
-						<td style="color: white">NAME</td>
-						<td style="color: white">DESCRIPTION</td>
-						<td style="color: white">Action</td>
+						<td style="color: red">ID</td>
+						<td style="color: red">NAME</td>
+						<td style="color: red">DESCRIPTION</td>
+						<td style="color: red">Action</td>
 					</tr>
 				</thead>
 
@@ -95,11 +95,11 @@
 				<c:forEach var="category" items="${categoryList}">
 
 					<tr>
-						<td style="color: white">${category.id}</td>
-						<td style="color: white">${category.name}</td>
-						<td style="color: white">${category.description}</td>
+						<td style="color: red">${category.id}</td>
+						<td style="color: red">${category.name}</td>
+						<td style="color: red">${category.description}</td>
 
-						<td style="color: white"><a href="manage_Edit_Category/${category.id}">Edit </a>||
+						<td><a href="manage_Edit_Category/${category.id}">Edit </a>||
 							<a href="manage_Delete_Category/${category.id}">Delete</a></td>
 					</tr>
 

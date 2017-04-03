@@ -86,17 +86,15 @@ public class SpringController {
 		log.debug("inLoginSession:"+auth.isAuthenticated());
 		for (GrantedAuthority authority : authorities) {
 
-			if (authority.getAuthority().equals(role)) {
-				session.setAttribute("UserLoggedIn", "true");
-				model.addAttribute("Cart", cart);
 
-				List<Cart> cartList = cartDAO.getAllCarts(username);
-				model.addAttribute("cartList", cartList);
-				model.addAttribute("cartSize", cartList.size());
-				model.addAttribute("totalAmount", cartDAO.getTotalAmount(username));
-
-				return "redirect:/";
-			} else {
+			 if (authority.getAuthority().equals(role)) 
+		     {
+		    	 session.setAttribute("UserLoggedIn", "true");
+		    	 session.setAttribute("cartsize",cartDAO.cartsize((Integer)session.getAttribute("userid")));
+		    	 return "redirect:/";
+		     }
+			
+			else {
 				session.setAttribute("isClickedAdminHome", "true");
 				model.addAttribute("product", new Product());
 
@@ -110,7 +108,7 @@ public class SpringController {
 	@RequestMapping("/perform_logout")
 	public ModelAndView performLogout() {
 		// what you attach to session at the time login need to remove.
-		System.err.println("Perform Logout!!!!!!!!!!!!!!!!!!!!");
+	
 		log.debug("inperformlogout:"+auth.isAuthenticated());
 		log.debug("Starting of method Logout");
 		session.invalidate();
