@@ -34,6 +34,7 @@
 	<ul class="nav navbar-nav navbar-right">
 	<sec:authorize access="isAuthenticated()">
 		<li><a href="perform_logout"> <span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+		<li><a  class="alink" href="#">Hi  <sec:authentication property="principal.username"/></a></li>
 		</sec:authorize>
 	</ul>
 	

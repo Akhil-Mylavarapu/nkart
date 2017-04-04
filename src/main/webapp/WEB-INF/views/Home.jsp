@@ -17,7 +17,7 @@
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet"
 	href="<c:url value="/resources/Styles/Home.css"/>">
-<script
+<scripts
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -73,6 +73,18 @@
 	<c:if test="${isUserClickedCart == true}">
 		<jsp:include page="Cart.jsp"></jsp:include>
 	</c:if>
+	<%-- <c:if test="${isUserClickedUserdetails== true}">
+	<jsp:include page="userdetails.jsp"></jsp:include>
+	</c:if> --%>
+	
+	<!-- *************************************************************************************** -->
+	<%-- <c:if test="${empty LoggedIn}"> --%>
+
+		<%-- <c:choose>
+			<c:when test="${isAdmin!=true}">
+				<c:if test="${!empty ProductList}"> --%>
+				<c:if test="${isUserClickedCart!=true}">
+				
 	<c:forEach items="${productList}" var="product">
 		<tr>
 
@@ -97,6 +109,14 @@
 			</td>
 		</tr>
 	</c:forEach>
+	</c:if>
+	<%-- </c:if>
+	
+	</c:when>
+	</c:choose>
+	</c:if> --%>
+	
+	<!--******************************************************************************************  -->
 
 	<%-- <div align="bottom">
 <jsp:include page="Footer.jsp"></jsp:include>

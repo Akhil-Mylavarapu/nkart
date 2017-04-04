@@ -73,18 +73,30 @@
 	<c:if test="${isUserClickedCart == true}">
 		<jsp:include page="Cart.jsp"></jsp:include>
 	</c:if>
+	<%-- <c:if test="${isUserClickedUserdetails== true}">
+	<jsp:include page="userdetails.jsp"></jsp:include>
+	</c:if> --%>
+	
+	<!-- *************************************************************************************** -->
+	<%-- <c:if test="${empty LoggedIn}"> --%>
+
+		<%-- <c:choose>
+			<c:when test="${isAdmin!=true}">
+				<c:if test="${!empty ProductList}"> --%>
+				<c:if test="${isUserClickedCart!=true}">
+				
 	<c:forEach items="${productList}" var="product">
 		<tr>
 
 
 			<td>
-				<div class="thumbnail">
+				<!-- <div class="thumbnail"> -->
 				<div class="col-md-4">
 					<a href="ShowProduct/${product.id}"> <img height="150px"
 						width="150px" alt="${product.id }"
 						src="<c:url value="/resources/images/${product.id }.jpg"></c:url>"></a>
 
-					<td><c:url var="action" value="addtocart/${product.id}"></c:url>
+					<td><c:url var="action" value="addtoCart/${userid}/${product.id}"></c:url>
 						<form:form action="${action}" modelAttribute="cart">
 							<td id="td1"><c:out value="${product.name}" /><br>
 							<td id="td1"><c:out value="${product.price}" /> <input
@@ -92,11 +104,19 @@
 						</form:form></td> <br>
 
 				</div>
-				</div>
+				<!-- </div> -->
 
 			</td>
 		</tr>
 	</c:forEach>
+	</c:if>
+	<%-- </c:if>
+	
+	</c:when>
+	</c:choose>
+	</c:if> --%>
+	
+	<!--******************************************************************************************  -->
 
 	<%-- <div align="bottom">
 <jsp:include page="Footer.jsp"></jsp:include>

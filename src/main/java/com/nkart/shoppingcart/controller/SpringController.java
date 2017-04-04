@@ -91,6 +91,7 @@ public class SpringController {
 			}
 
 			else {
+				session.setAttribute("isAdmin", "true");
 				session.setAttribute("isClickedAdminHome", "true");
 				model.addAttribute("product", new Product());
 

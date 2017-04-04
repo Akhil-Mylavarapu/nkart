@@ -1,9 +1,11 @@
 com\nkart\shoppingcart\controller\AdminController.class
 com\nkart\shoppingcart\controller\ProductController.class
+com\nkart\model\Cart.class
 com\nkart\shoppingcart\controller\CartController.class
 com\nkart\shoppingcart\controller\SpringController.class
 com\nkart\shoppingcart\controller\CategoryController.class
 com\nkart\shoppingcart\controller\SupplierController.class
+com\nkart\handler\CheckoutHandler.class
 com\nkart\shoppingcart\controller\MultiPartController.class
 com\nkart\shoppingcart\controller\UserController.class
 com\nkart\shoppingcart\controller\HomeController.class
