@@ -53,7 +53,7 @@ public class HomeController {
 		session.setAttribute("category", category); // domain object names
 		session.setAttribute("product", product);
 		session.setAttribute("supplier", supplier);
-		session.setAttribute("user", new User());
+		session.setAttribute("user", user);
 
 		session.setAttribute("categoryList", categoryDAO.getAllCategories());
 
@@ -115,7 +115,7 @@ public class HomeController {
 
 	}
 
-	@RequestMapping("/cart")
+	/*@RequestMapping("/cart")
 	public ModelAndView showCartPage() {
 		log.debug("Starting of the method showCartPage");
 		ModelAndView mv = new ModelAndView("/Home");
@@ -124,4 +124,4 @@ public class HomeController {
 		return mv;
 
 	}
-}
+*/}

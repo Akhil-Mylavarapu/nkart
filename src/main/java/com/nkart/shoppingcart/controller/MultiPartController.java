@@ -5,8 +5,9 @@ import java.io.OutputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.multipart.MultipartFile;
-
+@Controller
 public class MultiPartController
 {
 	public static void upload(String path,MultipartFile file,String filename)

@@ -80,7 +80,7 @@ public class AdminController {
 	@RequestMapping("/manage_ProductsEdit")
 	public ModelAndView manageProductsEdit() {
 
-		log.debug("Starting of the method manageProducts");
+		log.debug("Starting of the method manageProductsEdit");
 
 		ModelAndView modelAndView = new ModelAndView("/Admin/AdminHome");
 
@@ -95,7 +95,7 @@ public class AdminController {
 		modelAndView.addObject("supplier", supplier);
 		modelAndView.addObject("supplierList", supplierDAO.getAllSuppliers());
 
-		log.debug("Ending of the method manageProducts");
+		log.debug("Ending of the method manageProductsEdit");
 		return modelAndView;
 	}
 	
@@ -115,10 +115,12 @@ public class AdminController {
 		return modelAndView;
 	}
 	@RequestMapping("/AdminHome")
-	public ModelAndView showAdminHomePage() {
-		System.out.println("clicked on login");
+	public ModelAndView showAdminHomePage() 
+	{
+		log.debug("Starting of the method showAdminHome");
 		ModelAndView mv = new ModelAndView("/Admin/AdminHome");
 		mv.addObject("isClickedAdminHome", true);
+		log.debug("Ending of the method showAdminHome");
 		return mv;
 
 	}

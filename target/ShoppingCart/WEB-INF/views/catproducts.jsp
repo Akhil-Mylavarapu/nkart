@@ -22,7 +22,7 @@ body  {
 </style>
 
 
-<h1>Welocme to NKART</h1>
+<h1> Welcome to NKART</h1>
 
 
 
@@ -35,8 +35,8 @@ body  {
   <div class="desc">
          Product Id : <c:out value="${product.id}" /><br>
          Product Name : <c:out value="${product.name }"/>
-   <c:url var="action" value="addtocart/${product.id}"></c:url>
-   <form:form action="${action}" commandName="cart">
+   <c:url var="action" value="addtoCart/{userid}/{id}"></c:url>
+   <form:form action="${action}" commandName="Cart">
    <input type="submit" class="btn btn-primary" value="Add To Cart" />
    </form:form>
 							</div>

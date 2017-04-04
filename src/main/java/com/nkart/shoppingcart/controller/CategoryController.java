@@ -49,27 +49,32 @@ public class CategoryController {
 	}
 
 	@GetMapping("/manage_Delete_Category/{id}")
-	public String deleteCategory(@PathVariable("id") int id) {
+	public String deleteCategory(@PathVariable("id") int id)
+	{
+		log.debug("Starting of the method deleteCategory");
 		category.setId(id);
 		categoryDAO.deleteCategory(category);
+		log.debug("Ending of the method deleteCategory");
 
 		return "redirect:/manage_Category";
 
 	}
 
 	@RequestMapping(value = "/manage_Edit_Category/{id}", method = RequestMethod.GET)
-	public String editCategory(@PathVariable("id") int id, RedirectAttributes attributes) {
+	public String editCategory(@PathVariable("id") int id, RedirectAttributes attributes)
+	{
+		log.debug("Starting of the method editCategory");
 		attributes.addFlashAttribute("category", this.categoryDAO.getCategoryById(id));
 		/*attributes.addAttribute("isAdminClickedUpdate", true);*/
-
+		log.debug("Ending of the method editCategory");
 		return "redirect:/manage_Category";
 	}
 	@RequestMapping(value="/manage_Update_category")
 	public String updateCategory(@ModelAttribute("category") Category category)
 	{
-		System.err.println("Category Name: "+category.getName());
-		System.err.println("Category Desc: "+category.getDescription());
+		log.debug("Starting of the method updateCategory");
 		categoryDAO.updateCategory(category);
+		log.debug("Ending of the method updateCategory");
 		return "redirect:/manage_Category";
 	
 	}

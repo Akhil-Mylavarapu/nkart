@@ -131,7 +131,7 @@
 				
 		
 					<li class="nav navbar-nav">
-						<li><a href="cart"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+						<li><a href="Cart"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
 					
 					</sec:authorize>
 	</ul>

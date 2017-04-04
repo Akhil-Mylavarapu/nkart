@@ -4,9 +4,10 @@
 <html>
 <head>
 
- <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-      <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="sec"
+	uri="http://www.springframework.org/security/tags"%>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>NKART Home Page</title>
 
@@ -25,8 +26,7 @@
 		document.body.style.backgroundImage = "url('resources/images/game.jpg')"
 	</script>
 	<center>
-		<img class="img-circle"
-			src="<c:url value="resources/images/background-5.jpg"></c:url>"
+		<img src="<c:url value="resources/images/giphy.gif"></c:url>"
 			alt="ShoppingCartPic" width="100px" height="80px" align="left">
 	</center>
 	<div>
@@ -41,7 +41,7 @@
 		<jsp:include page="menu/CustomerCategoryMenu.jsp"></jsp:include>
 		<jsp:include page="menu/Carousel.jsp"></jsp:include>
 	</c:if>
-	
+
 
 	<c:if test="${isAdmin==true}">
 		<center>
@@ -52,7 +52,7 @@
 		<jsp:include page="menu/AdminCategoryMenu.jsp"></jsp:include>
 	</c:if>
 	<c:if test="${isUserClickedRegistration==true}">
-	<jsp:forward page="Registration.jsp"></jsp:forward>
+		<jsp:forward page="Registration.jsp"></jsp:forward>
 	</c:if>
 	<%-- <c:if test="${isUserClickedLogin}">
 		<jsp:include page="Login.jsp"></jsp:include>
@@ -74,31 +74,32 @@
 		<jsp:include page="Cart.jsp"></jsp:include>
 	</c:if>
 	<c:forEach items="${productList}" var="product">
-			<tr>
+		<tr>
 
 
-				<td>
-					<!-- --<div class="thumbnail">-->
-					<div class="col-md-4">
-						<a href="ShowProduct/${product.id}"> <img height="150px"
-							width="150px" alt="${product.id }"
-							src="<c:url value="/resources/images/${product.id }.jpg"></c:url>"></a>
+			<td>
+				<!-- <div class="thumbnail"> -->
+				<div class="col-md-4">
+					<a href="ShowProduct/${product.id}"> <img height="150px"
+						width="150px" alt="${product.id }"
+						src="<c:url value="/resources/images/${product.id }.jpg"></c:url>"></a>
 
-						<td><c:url var="action" value="addtocart/${product.id}"></c:url>
-							<form:form action="${action}" modelAttribute="cart">
-								<td id="td1"><c:out value="${product.name}" /><br>
-								<td id="td1"><c:out value="${product.price}" /> <input
-									type="submit" class="btn btn-primary" value="Add To Cart" /><br>
-							</form:form></td>
-						<br>
+					<td><c:url var="action" value="addtoCart/${userid}/${product.id}"></c:url>
+						<form:form action="${action}" modelAttribute="cart">
+							<td id="td1"><c:out value="${product.name}" /><br>
+							<td id="td1"><c:out value="${product.price}" /> <input
+								type="submit" class="btn btn-primary" value="Add To Cart" /><br>
+						</form:form></td> <br>
 
-					</div>
-			
+				</div>
+				<!-- </div> -->
+
 			</td>
-			</tr>
-		</c:forEach>
+		</tr>
+	</c:forEach>
 
-
-
+	<%-- <div align="bottom">
+<jsp:include page="Footer.jsp"></jsp:include>
+</div> --%>
 </body>
 </html>

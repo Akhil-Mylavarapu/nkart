@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>carousel</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -14,6 +14,7 @@
   .carousel-inner > .item > a > img {
       width: 70%;
       margin: auto;
+      
   }
   </style>
 </head>
@@ -39,7 +40,7 @@
         <img src="resources/images/carosel1.jpg" alt="Lie of Pi" width="460" height="345">
         <div class="carousel-caption">
           <h3>Life of Pi</h3>
-          <p>Pi Patel finds a way to survive in a lifeboat that is adrift in the middle of nowhere. His fight against the odds is heightened by the company of a hyena and a male Bengal tiger.</p>
+          <p>Pi Patel finds a way to survive in a life-boat that is adrift in the middle of nowhere. His fight against the odds is heightened by the company of a hyena and a male Bengal tiger.</p>
         </div>
       </div>
 

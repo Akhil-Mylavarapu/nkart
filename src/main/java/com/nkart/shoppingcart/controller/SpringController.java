@@ -41,9 +41,7 @@ public class SpringController {
 	private HttpSession session;
 
 	private Authentication auth;
-	
-	
-	
+
 	// authentication-failure-forward-url="/loginError"
 	@RequestMapping(value = "/loginError", method = RequestMethod.GET)
 	public String loginError(Model model) {
@@ -70,8 +68,8 @@ public class SpringController {
 	public String login_session_attributes(HttpSession session, Model model) {
 
 		log.debug("Starting of the method loggin.session.attributes:");
-	
-		 auth =SecurityContextHolder.getContext().getAuthentication(); 
+
+		auth = SecurityContextHolder.getContext().getAuthentication();
 		String username = auth.getName();
 		User user = userDAO.getUserByName(username);
 		session.setAttribute("userid", user.getId());
@@ -82,18 +80,16 @@ public class SpringController {
 		Collection<GrantedAuthority> authorities = (Collection<GrantedAuthority>) SecurityContextHolder.getContext()
 				.getAuthentication().getAuthorities();
 		String role = "ROLE_USER";
-		
-		log.debug("inLoginSession:"+auth.isAuthenticated());
+
+		log.debug("inLoginSession:" + auth.isAuthenticated());
 		for (GrantedAuthority authority : authorities) {
 
+			if (authority.getAuthority().equals(role)) {
+				session.setAttribute("UserLoggedIn", "true");
+				session.setAttribute("cartsize", cartDAO.cartsize((Integer) session.getAttribute("userid")));
+				return "redirect:/";
+			}
 
-			 if (authority.getAuthority().equals(role)) 
-		     {
-		    	 session.setAttribute("UserLoggedIn", "true");
-		    	 session.setAttribute("cartsize",cartDAO.cartsize((Integer)session.getAttribute("userid")));
-		    	 return "redirect:/";
-		     }
-			
 			else {
 				session.setAttribute("isClickedAdminHome", "true");
 				model.addAttribute("product", new Product());
@@ -101,33 +97,19 @@ public class SpringController {
 				return "/Admin/AdminHome";
 			}
 		}
-		log.debug("Ending of method login_session_attributes: "+auth.isAuthenticated());
+		log.debug("Ending of method login_session_attributes: " + auth.isAuthenticated());
 		return "/Home";
 	}
 
 	@RequestMapping("/perform_logout")
 	public ModelAndView performLogout() {
 		// what you attach to session at the time login need to remove.
-	
-		log.debug("inperformlogout:"+auth.isAuthenticated());
+
+		log.debug("inperformlogout:" + auth.isAuthenticated());
 		log.debug("Starting of method Logout");
 		session.invalidate();
 
 		ModelAndView mv = new ModelAndView("/");
-
-		// After logout also use should able to browse the categories and
-		// products
-		// as we invalidated the session, need to load these data again.
-
-//		session.setAttribute("category", category);
-//		session.setAttribute("product", product);
-//		session.setAttribute("supplier", supplier);
-//
-//		session.setAttribute("categoryList", categoryDAO.getAllCategories());
-//
-//		session.setAttribute("supplierList", supplierDAO.getAllSuppliers());
-//
-//		session.setAttribute("productList", productDAO.getAllProducts());
 
 		// OR Simpley remove only one attribute from the session.
 
