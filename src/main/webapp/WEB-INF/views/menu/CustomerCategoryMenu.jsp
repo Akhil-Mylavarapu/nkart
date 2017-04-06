@@ -19,41 +19,26 @@
 <body>
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
+		
 
-			<div class="navbar-header"></div>
-			<button type="button" class="navbar-toggle collapsed"
-				data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-				aria-expanded="false">
-				<span class="sr-only">Toggle navigation</span> <span
-					class="icon-bar"></span> <span class="icon-bar"></span> <span
-					class="icon-bar"></span>
-			</button>
 			<ul class="nav navbar-nav dropdown ">
 				<li><a href="Home"> <span class="glyphicon glyphicon-home"></span>Home
 				</a></li>
 			</ul>
- 
+<ul class="nav navbar-nav" role="tablist">
+<c:forEach items="${categoryList}" var="category">
+<li class="dropdown"><a class="dropdown-toggle" href="navproducts/${category.id}">${category.name}</a>
+</li>
+</c:forEach>
+
+</ul>
 
 
 
-			<ul class="nav navbar-nav">
-				<li><a href="#">CATEGORIES <span
-						class="glyphicon glyphicon-hand-right"></span></a></li>
-			</ul>
+			
 
-			<ul class="nav navbar-nav" role="tablist">
-				<c:forEach items="${categoryList}" var="category">
-					<li class="dropdown"><a class="dropdown-toggle"
-						data-toggle="dropdown" href="#">${category.name}<span
-							class="caret"></span></a>
+			
 
-						<ul class="dropdown-menu" role="menu">
-							<c:forEach items="${category.products}" var="product">
-								<li><a href="manage_Products/get/${product.id}">${product.name}</a></li>
-							</c:forEach>
-						</ul> </li>
-				</c:forEach>
-			</ul>
 
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="#">${LoginMessage}</a></li>
@@ -114,6 +99,7 @@
 
 
 			</div>
+		</div>
 		</div>
 
 	</nav>

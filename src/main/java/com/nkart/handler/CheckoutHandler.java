@@ -1,46 +1,38 @@
 package com.nkart.handler;
 
-
-
 import org.springframework.stereotype.Service;
 
 import com.nkart.model.Cart;
 
-
-
-
-
 @Service
 public class CheckoutHandler {
-public String cardPayment(Cart cart)
-	
-	{	
+	public String cardPayment(Cart cart)
+
+	{
 		return "true";
-		
+
 	}
-	
-	 public String paymentMethod(Cart cart)
-	 
-	 {
+
+	public String paymentMethod(Cart cart)
+
+	{
 		System.out.println("method");
-		String method=cart.getMethod();
+		String method = cart.getMethod();
 		System.out.println(method);
-		if(method.equals("cod"))
-		
+		if (method.equals("cod"))
+
 		{
-			
+
 			return "cod";
 		}
-		
-		else 
-		
+
+		else
+
 		{
-			
+
 			return "card";
 		}
-	
-	 }
-	
-	
-}
 
+	}
+
+}

@@ -17,6 +17,11 @@ import com.nkart.shoppingcart.domain.Category;
 import com.nkart.shoppingcart.domain.Product;
 import com.nkart.shoppingcart.domain.Supplier;
 
+
+
+
+
+
 @Controller
 public class AdminController {
 
@@ -33,6 +38,8 @@ public class AdminController {
 	ProductDAO productDAO;
 	@Autowired
 	Product product;
+	
+	
 
 	// define 3 methods
 	@RequestMapping("manage_Category")

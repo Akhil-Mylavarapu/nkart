@@ -17,14 +17,14 @@
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet"
 	href="<c:url value="/resources/Styles/Home.css"/>">
-<script
+<script>
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <body>
-	<script>
-		document.body.style.backgroundImage = "url('resources/images/game.jpg')"
-	</script>
+	
+	<c:url var="back" value="resources/images/game.jpg"></c:url>
+<body style=" background-image: url(${back})">
 	<center>
 		<img src="<c:url value="resources/images/giphy.gif"></c:url>"
 			alt="ShoppingCartPic" width="100px" height="80px" align="left">
@@ -73,6 +73,18 @@
 	<c:if test="${isUserClickedCart == true}">
 		<jsp:include page="Cart.jsp"></jsp:include>
 	</c:if>
+	<c:choose>
+		<c:when test="${Clickedshowproduct}">
+			<c:import url="/WEB-INF/views/ShowProduct.jsp"></c:import>
+		</c:when>
+	</c:choose>
+	<c:choose>
+	 <c:when test="${Clickedcatproduct}">
+			<c:import url="/WEB-INF/views/catproducts.jsp"></c:import>
+		</c:when>
+	</c:choose> 
+	
+	
 	<%-- <c:if test="${isUserClickedUserdetails== true}">
 	<jsp:include page="userdetails.jsp"></jsp:include>
 	</c:if> --%>

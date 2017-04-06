@@ -69,6 +69,7 @@ public class HomeController {
 		session.setAttribute("supplierList", supplierDAO.getAllSuppliers());
 
 		session.setAttribute("productList", productDAO.getAllProducts());
+		mv.addObject("Clickedcatproduct", "true");
 		log.debug("Ending of the method onLoad");
 
 		return mv;
@@ -147,7 +148,21 @@ public class HomeController {
 	 @RequestMapping(value ="ShowProduct/{id}" )
 	    public String ShowProduct(@PathVariable("id") int id,RedirectAttributes attributes,Model m) {
 	        m.addAttribute("UserClickedshowproduct", "true");
-	        m.addAttribute("IndividualProduct", productDAO.getProductById(id));
+	        m.addAttribute("IndividualProduct", productDAO.getproduct(id));
 	    	return "ShowProduct";
 	    }
+	 
+	 @RequestMapping(value="navproducts/{id}")
+	    public String navproduct(Model m,@PathVariable("id") int id ,RedirectAttributes attributes){
+	    	
+	    	m.addAttribute("navproducts", productDAO.navproduct(id));
+	    	attributes.addFlashAttribute("navproducts", productDAO.navproduct(id));
+	    	return "redirect:/";
+	    }
+	/* @RequestMapping(value="navproduct/{id}")
+		public String navproduct(Model m,@PathVariable("id") int id){
+			m.addAttribute("Clickedcatproduct", "true");
+		m.addAttribute("navproducts", productDAO.navproduct(id));
+			return "catproducts";
+		}*/
 }

@@ -19,7 +19,7 @@
 </head>
 <body>
 <h1 align="center" style="margin-top:60px; color: red">Your Cart</h1>
-${emptycart}
+<h4 align="left" style="color: red">${emptycart}</h4>
 <div class="container">
 	<table id="cart" class="table table-hover table-condensed">
     				<thead>

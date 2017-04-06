@@ -34,6 +34,9 @@
 	</div>
 	<jsp:include page="menu/CustomerCategoryMenu.jsp"></jsp:include>
 	<center>
+	${errorMessage}
+	${regsuccess}
+	
 		<div>
 			<h2 style="font-size: 40px; color: cyan">Login to the Gaming
 				World</h2>

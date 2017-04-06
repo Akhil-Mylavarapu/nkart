@@ -39,7 +39,7 @@ public class CartController {
 
 	 int q;
 	 
-	 @RequestMapping(value={"addtoCart/{userid}/{id}"})
+	 @RequestMapping(value={"addtocart/{id}","navproducts/addtocart/{id}","addtoCart/{userid}/{id}"})
 	 public String addTOCart(@ModelAttribute("cart")Cart cart,BindingResult result,@PathVariable("userid") int userid,@PathVariable("id") int productid,HttpSession session)throws Exception{
 	 System.err.println("userid==========="+userid);
 	  log.info("Starting of the method addToCart");
@@ -150,10 +150,5 @@ public class CartController {
 		 log.info("Ending of the method payment");
 	  return "Home";
 	 }
-	 /*@RequestMapping(value="navproducts/{id}")
-	    public String navproduct(Model m,@PathVariable("id") int id ){
-	    	m.addAttribute("Clickedcatproduct", "true");
-	    	m.addAttribute("navproducts", productDAO.navproduct(id));
-	    	return "Cart";
-	    }*/
+	
 	}

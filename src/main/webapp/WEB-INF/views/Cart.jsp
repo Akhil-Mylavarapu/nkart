@@ -19,7 +19,7 @@
 </head>
 <body>
 <h1 align="center" style="margin-top:60px; color: red">Your Cart</h1>
-${emptycart}
+<h4 align="left" style="color: red">${emptycart}</h4>
 <div class="container">
 	<table id="cart" class="table table-hover table-condensed">
     				<thead>
@@ -37,7 +37,7 @@ ${emptycart}
 						<tr>
 							<td style="color: red" data-th="Product">
 								<div class="row">
-									<div class="col-sm-2 hidden-xs"><img src="http://placehold.it/100x100" alt="..." class="img-responsive"/></div>
+									<div class="col-sm-2 hidden-xs"><img src="<c:url value="/resources/images/${cart.id }.jpg"></c:url> alt="${cart.id}" class="img-responsive"/></div>
 									<div class="col-sm-10">
 										<h4 class="nomargin"><c:out value="${cart.productname }"/></h4>
 									</div>
