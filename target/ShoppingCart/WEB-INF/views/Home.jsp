@@ -24,7 +24,8 @@
 <body>
 	
 	<c:url var="back" value="resources/images/game.jpg"></c:url>
-<body style=" background-image: url(${back})">
+<body style=" background-image: url(${back});background-repeat: no-repeat;
+    background-attachment: fixed">
 	<center>
 		<img src="<c:url value="resources/images/giphy.gif"></c:url>"
 			alt="ShoppingCartPic" width="100px" height="80px" align="left">
@@ -74,7 +75,7 @@
 		<jsp:include page="Cart.jsp"></jsp:include>
 	</c:if>
 	<c:choose>
-		<c:when test="${Clickedshowproduct}">
+		<c:when test="${UserClickedshowproduct}">
 			<c:import url="/WEB-INF/views/ShowProduct.jsp"></c:import>
 		</c:when>
 	</c:choose>
@@ -90,12 +91,14 @@
 	</c:if> --%>
 	
 	<!-- *************************************************************************************** -->
-	<%-- <c:if test="${empty LoggedIn}"> --%>
+	<c:if test="${UserClickednavproduct!=true}">
+	<c:if test="${empty LoggedIn}">
 
-		<%-- <c:choose>
+		 <c:choose>
 			<c:when test="${isAdmin!=true}">
-				<c:if test="${!empty ProductList}"> --%>
+				<c:if test="${!empty ProductList}"> 
 				<c:if test="${isUserClickedCart!=true}">
+				
 				
 	<c:forEach items="${productList}" var="product">
 		<tr>
@@ -122,11 +125,13 @@
 		</tr>
 	</c:forEach>
 	</c:if>
-	<%-- </c:if>
+	 </c:if>
+	 
 	
 	</c:when>
 	</c:choose>
-	</c:if> --%>
+	</c:if>
+	</c:if>
 	
 	<!--******************************************************************************************  -->
 

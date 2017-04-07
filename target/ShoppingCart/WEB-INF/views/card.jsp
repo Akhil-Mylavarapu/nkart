@@ -45,7 +45,7 @@
             </div>    
             <div class="container" style="padding-left: 300px;">
             <div class="row cart-body" style="width: 500px;">
-                <form class="form-horizontal" method="post" action="">
+                <form class="form-horizontal" method="post" action="tqpage">
                                    <div class="panel panel-info" >
                         <div class="panel-heading"><span><i class="glyphicon glyphicon-lock"></i></span> Secure Payment</div>
                         <div class="panel-body">

@@ -43,7 +43,7 @@ width:100%;
   <div class="container-fluid"> 
   <div class="navbar-header" class=" pull-left">
   <a class="navbar-brand" style="font-size:27px;margin-top: -4px;">
-     <i class="fa fa-opencart" aria-hidden="true"></i> Scart </a>
+     <i class="fa fa-opencart" aria-hidden="true"></i> Nkart </a>
     <sec:authorize access="isAuthenticated()">
      <a class="navbar-brand" style="font-size:15px;"><span class="glyphicon glyphicon-user"></span> WELCOME <sec:authentication property="principal.username"/> </a>
      
@@ -51,14 +51,14 @@ width:100%;
 </sec:authorize>
     </div>
      <ul class="nav navbar-nav navbar-right" style="margin-bottom:-2px;">    
-      <li><a href="HOME">HOME</a></li>
+      <li><a href="Home">HOME</a></li>
        <sec:authorize access="!isAuthenticated()">
       <li><a href="Registration">REGISTER</a></li>
       <li><a href="Login">LOGIN</a></li>
       </sec:authorize>
 	  <li><a href="CONTACTUS">CONTACT US</a></li>
    <sec:authorize access="isAuthenticated()">
-   <li ><a href="CartPage" ><p>CART <span class="glyphicon glyphicon-shopping-cart"></span></p></a></li>
+   <li ><a href="Cart" ><p>CART <span class="glyphicon glyphicon-shopping-cart"></span></p></a></li>
 	<li><a href="<c:url value="/perform_logout" />"><p>LOGOUT<span class="glyphicon glyphicon-log-out"></span></p></a></li>
 </sec:authorize>
 					  

@@ -45,7 +45,7 @@ width:100%;
   <div class="container-fluid"> 
   <div class="navbar-header" class=" pull-left">
   <a class="navbar-brand" style="font-size:27px;margin-top: -4px;">
-     <i class="fa fa-opencart" aria-hidden="true"></i>SCart </a>
+     <i class="fa fa-opencart" aria-hidden="true"></i>Nkart </a>
     <sec:authorize access="isAuthenticated()">
      <a class="navbar-brand" style="font-size:15px;"><span class="glyphicon glyphicon-user"></span> WELCOME <sec:authentication property="principal.username"/> </a>
      
@@ -53,14 +53,14 @@ width:100%;
 </sec:authorize>
     </div>
      <ul class="nav navbar-nav navbar-right" style="margin-bottom:-2px;">    
-      <li><a href="#">HOME</a></li>
+      <li><a href="Home">HOME</a></li>
        <sec:authorize access="!isAuthenticated()">
      <li><a href="<c:url value="/perform_logout" />">Logout</a></li>
       <li><a href="Login">LOGIN</a></li>
       </sec:authorize>
 	  <li><a href="CONTACTUS">CONTACT US</a></li>
    <sec:authorize access="isAuthenticated()">
-   <li ><a href="CartPage" ><p>CART <span class="glyphicon glyphicon-shopping-cart"></span></p></a></li>
+   <li ><a href="Cart" ><p>CART <span class="glyphicon glyphicon-shopping-cart"></span></p></a></li>
 	<li><a href="<c:url value="/perform_logout" />"><p>LOGOUT<span class="glyphicon glyphicon-log-out"></span></p></a></li>
 </sec:authorize>
 					  
@@ -73,7 +73,7 @@ width:100%;
   <div style="text-align:center;padding-top:40px;padding-bottom:40px">
   <h1> Thank You!!</h1>
   <h3>your payment has been received <span class="glyphicon glyphicon-ok"></span></h3>
-  <img src="C:\Users\dell1\Mronline\Shoppingsite\src\main\webapp\resources\images\tq.jpg.png" class="img-rounded" alt="tq" width="304" height="236"> 
+  <img src="resources/images/tqpage.jpg" class="img-rounded" alt="tq" width="304" height="236"> 
   </div>
    
 </body>

@@ -37,7 +37,7 @@
 						<tr>
 							<td style="color: red" data-th="Product">
 								<div class="row">
-									<div class="col-sm-2 hidden-xs"><img src="http://placehold.it/100x100" alt="..." class="img-responsive"/></div>
+									<div class="col-sm-2 hidden-xs"><img src="<c:url value="/resources/images/${cart.productid}.jpg"></c:url>" alt="" class="img-responsive"/></div>
 									<div class="col-sm-10">
 										<h4 class="nomargin"><c:out value="${cart.productname }"/></h4>
 									</div>

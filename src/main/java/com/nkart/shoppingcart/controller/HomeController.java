@@ -156,6 +156,7 @@ public class HomeController {
 	    public String navproduct(Model m,@PathVariable("id") int id ,RedirectAttributes attributes){
 	    	
 	    	m.addAttribute("navproducts", productDAO.navproduct(id));
+	    	m.addAttribute("UserClickednavproduct", "true");
 	    	attributes.addFlashAttribute("navproducts", productDAO.navproduct(id));
 	    	return "redirect:/";
 	    }

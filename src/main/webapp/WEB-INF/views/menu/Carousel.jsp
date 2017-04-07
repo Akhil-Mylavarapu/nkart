@@ -37,7 +37,7 @@
     <div class="carousel-inner" role="listbox">
 
       <div class="item active">
-        <img src="resources/images/carosel1.jpg" alt="Lie of Pi" width="460" height="345">
+        <img  src="resources/images/carosel1.jpg" alt="Lie of Pi" width="460" height="345">
         <div class="carousel-caption">
           <h3>Life of Pi</h3>
           <p>Pi Patel finds a way to survive in a life-boat that is adrift in the middle of nowhere. His fight against the odds is heightened by the company of a hyena and a male Bengal tiger.</p>

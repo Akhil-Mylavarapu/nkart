@@ -13,7 +13,8 @@ body {
 </style>
 </head>
 <c:url var="back" value="resources/images/callofduty.jpg"></c:url>
-<body style=" background-image: url(${back})">
+<body style="background-image: url(${back});background-repeat: no-repeat;
+    background-attachment: fixed">
 	<div>
 		<h2 style="color: green; font-family: fantasy;">NKART</h2>
 		<h3 style="color: red; font-family: cursive;">Shopping is an art</h3>

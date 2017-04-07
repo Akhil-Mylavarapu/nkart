@@ -25,29 +25,15 @@ width:100%;
   </style>
 </head>
 <body>
- 
-<%-- <c:forEach items="${IndividualProduct}" var="product">
-			<div class="col-xs-3 ">
-				<div class="img"><a href="IndividualProduct/${product.id}"></a>
-<h1><c:out value="${product.name }"/></h1>
-<div class="horizontal">
-<div class="thumbnail">
-<img height="300px" width="300px" alt="${product.id }"
-				src="<c:url value="/resources/images/product/${product.id }.jpg"></c:url>">
-		</div>
-		</div>
-		<div align="right">
-		<c:out value="${product.name}"/><br>
-						<c:out value="${product.price }"/><br>
-				</div>
-				</div>
--+				</div>
-</c:forEach> --%>
-
-
+<jsp:include page="menu/CustomerCategoryMenu.jsp"></jsp:include>
+<c:url var="back" value="../resources/images/game.jpg"></c:url>
+<body style=" background-image: url(${back});background-repeat: no-repeat;
+    background-attachment: fixed">
 	<div class="container">
 		<c:forEach items="${IndividualProduct}" var="product">
 		<h2><c:out value="${product.name }"/></h2>
+	
+		
 			<div class="col-xs-6 w3-animate-left">
 				<div class="img">
 					<img  height="300px" width="300px" alt="${product.id}" src="<c:url value="/resources/images/${product.id}.jpg"></c:url>">
@@ -69,11 +55,26 @@ width:100%;
 						<div class="form-group">
 							 <input type="text" class="form-control" value="Rs. ${product.price}" readonly="readonly">
 						</div>
+						<div class="form-group">
+							 <input type="text" class="form-control" value="${product.description}" readonly="readonly">
+						</div>
+						
+						<div>
+						<p width="300" height="200">${product.url}</p>
+						</div>
+						<form action="../addtoCart/${userid}/${product.id}">
+										<input type="submit" value="Add to Cart"
+											class="btn btn-xs btn-success btn-block">
+
+									</form>
+									<!-- <iframe width="300" height="200" src="https://www.youtube.com/embed/VjZ5tgjPVfU" frameborder="0" allowfullscreen></iframe> -->
 						</div>
 						</div>
 						</div>
 						</c:forEach>
 						</div>
+						
+						
 
 
 </body>

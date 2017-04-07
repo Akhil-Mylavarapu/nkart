@@ -83,7 +83,12 @@
 							</form:select></td>
 					</tr>
 
-
+					<tr>
+						<td><form:label path="url">
+								<spring:message text="URL" />
+							</form:label></td>
+						<td><form:input path="url" required="true" /></td>
+					</tr>
 					<tr>
 						<td>Image:</td>
 						<td><form:input type="file"
@@ -106,24 +111,26 @@
 		<table border="2">
 			<thead>
 				<tr>
-					<th>ID</th>
-					<th>NAME</th>
-					<th>PRICE</th>
-					<th>DESCRIPTION</th>
-					<th>CATEGORY_ID</th>
-					<th>SUPPLIER_ID</th>
+					<th align="center">ID</th>
+					<th align="center">NAME</th>
+					<th align="center">PRICE</th>
+					<th align="center">DESCRIPTION</th>
+					<th align="center">CATEGORY_ID</th>
+					<th align="center">SUPPLIER_ID</th>
+					<th width="10" height="10">URL</th>
 					<th>IMAGE</th>
 					<th>ACTION</th>
 				</tr>
 			</thead>
 			<c:forEach var="product" items="${productList}">
 				<tr>
-					<td>${product.id}</td>
-					<td>${product.name}</td>
-					<td>${product.price}</td>
-					<td>${product.description}</td>
-					<td>${product.category_id}</td>
-					<td>${product.supplier_id}</td>
+					<td align="center">${product.id}</td>
+					<td align="center">${product.name}</td>
+					<td align="center">${product.price}</td>
+					<td align="center">${product.description}</td>
+					<td align="center">${product.category_id}</td>
+					<td align="center">${product.supplier_id}</td>
+					<td width="10"height="10">${product.url}</td> 
 					<td><div class="thumbnail">
 								<img height="100px" width="100px" alt="${product.id}"
 									src="<c:url value="/resources/images/${product.id}.jpg"></c:url>">
