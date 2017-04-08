@@ -5,47 +5,65 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+ <link rel="stylesheet" href="../../resources/footer/footer.css">
 </head>
 <body>
-<div class="navLeftFooter nav-sprite-v1" id="navFooter"><a href="#nav-top" id="navBackToTop"><div class="navFooterBackToTop"><span class="navFooterBackToTopText">Back to top</span></div></a>
-
-<table class="navFooterVerticalColumn" cellspacing="0" align="center" role="presentation"><tbody><tr><td class="navFooterLinkCol"><div class="navFooterColHead">Get to Know Us</div><ul><li class="nav_first"><a href="/b/ref=footer_gw_m_b_corporate?ie=UTF8&amp;node=1592138031" class="nav_a">About Us</a></li><li><a href="http://amazon.jobs" class="nav_a">Careers</a></li><li><a href="/b/ref=footer_press?ie=UTF8&amp;node=1592137031" class="nav_a">Press Releases</a></li><li><a href="/b/ref=footer_cares?ie=UTF8&amp;node=8872558031" class="nav_a">Amazon Cares</a></li><li class="nav_last"><a href="/Online-Charity/b/ref=footer_smile?ie=UTF8&amp;node=4594605031" class="nav_a">Gift a Smile</a></li></ul></td><td class="navFooterColSpacerInner"></td><td class="navFooterLinkCol"><div class="navFooterColHead">Connect with Us</div><ul><li class="nav_first"><a href="http://www.amazon.in/gp/redirect.html/ref=footer_fb?location=http://www.facebook.com/AmazonIN&amp;token=6BD0FB927CC51E76FF446584B1040F70EA7E88E1" class="nav_a">Facebook</a></li><li><a href="http://www.amazon.in/gp/redirect.html/ref=footer_twitter?location=http://twitter.com/AmazonIN&amp;token=7A1A4AE8F6CE0BD277D8295E58702D283F329C0F" class="nav_a">Twitter</a></li><li class="nav_last"><a href="https://www.instagram.com/amazondotin/" class="nav_a">Instagram</a></li></ul></td><td class="navFooterColSpacerInner"></td><td class="navFooterLinkCol"><div class="navFooterColHead">Make Money with Us</div><ul><li class="nav_first"><a href="https://www.amazon.in/refer-and-earn/ref=footer_refer_earn" class="nav_a">Refer &amp; Earn Rs.200</a></li><li><a href="https://www.amazon.in/selling/ref=nav_footer_sell" class="nav_a">Sell on Amazon</a></li><li><a href="https://www.amazon.in:443/gp/redirect.html/ref=footer_assoc?_encoding=UTF8&amp;location=https%3A%2F%2Faffiliate-program.amazon.in%2F%3Futm_campaign%3Dassocshowcase%26utm_medium%3Dfooter%26utm_source%3DGW&amp;source=standards&amp;token=680FE811DE27E32BF3D5179FEDA69BDF16FC904C" class="nav_a">Become an Affiliate</a></li><li><a href="http://services.amazon.in/services/fulfilment-by-amazon/benefits.html/ref=az_footer_fba?ld=AWRGINFBAfooter" class="nav_a">Fulfilment by Amazon</a></li><li class="nav_last"><a href="https://advertising.amazon.in/?ref=Amz.in" class="nav_a">Advertise Your Products</a></li></ul></td><td class="navFooterColSpacerInner"></td><td class="navFooterLinkCol"><div class="navFooterColHead">Let Us Help You</div><ul><li class="nav_first"><a href="/gp/css/homepage.html/ref=footer_ya" class="nav_a">Your Account</a></li><li><a href="/gp/css/returns/homepage.html/ref=footer_hy_f_4" class="nav_a">Returns Centre</a></li><li><a href="/gp/help/customer/display.html/ref=footer_swc?ie=UTF8&amp;nodeId=201083470" class="nav_a">100% Purchase Protection</a></li><li><a href="/gp/BIT/theamazonapp/ref=footer_assistant" class="nav_a">Amazon Assistant</a></li><li class="nav_last"><a href="/gp/help/customer/display.html/ref=footer_gw_m_b_he?ie=UTF8&amp;nodeId=200507590" class="nav_a">Help</a></li></ul></td></tr></tbody></table><div class="nav-footer-line"></div>
-
-<div class="navFooterLine navFooterLogoLine"><a href="/ref=footer_logo"><div class="nav-logo-base nav-sprite"></div></a></div>
-
-<div class="navFooterLine navFooterLinkLine navFooterPadItemLine "><ul><li class="nav_first"><a href="http://www.amazon.com.au/ref=footer_au" class="nav_a">Australia</a></li><li><a href="http://www.amazon.com.br/ref=footer_br" class="nav_a">Brazil</a></li><li><a href="http://www.amazon.ca/ref=footer_ca" class="nav_a">Canada</a></li><li><a href="http://www.amazon.cn/ref=footer_cn" class="nav_a">China</a></li><li><a href="http://www.amazon.fr/ref=footer_fr" class="nav_a">France</a></li><li><a href="http://www.amazon.de/ref=footer_de" class="nav_a">Germany</a></li><li><a href="http://www.amazon.it/ref=footer_it" class="nav_a">Italy</a></li><li><a href="http://www.amazon.co.jp/ref=footer_jp" class="nav_a">Japan</a></li><li><a href="http://www.amazon.com.mx/ref=footer_mx" class="nav_a">Mexico</a></li><li><a href="http://www.amazon.nl/ref=footer_nl" class="nav_a">Netherlands</a></li><li><a href="http://www.amazon.es/ref=footer_es" class="nav_a">Spain</a></li><li><a href="http://www.amazon.co.uk/ref=footer_uk" class="nav_a">United Kingdom</a></li><li class="nav_last"><a href="http://www.amazon.com/ref=footer_us" class="nav_a">United States</a></li></ul></div>
-
-<div class="navFooterLine navFooterLinkLine navFooterDescLine"><table class="navFooterMoreOnAmazon" cellspacing="0"><tbody><tr>
-<td class="navFooterDescItem"><a href="http://www.abebooks.com/" class="nav_a">AbeBooks<br> <span class="navFooterDescText">Books, art<br> &amp; collectibles</span></a></td>
-<td class="navFooterDescSpacer" style="width: 4%"></td>
-<td class="navFooterDescItem"><a href="http://aws.amazon.com/what-is-cloud-computing/?sc_channel=EL&amp;sc_campaign=IN_amazonfooter" class="nav_a">Amazon Web Services<br> <span class="navFooterDescText">Scalable Cloud<br> Computing Services</span></a></td>
-<td class="navFooterDescSpacer" style="width: 4%"></td>
-<td class="navFooterDescItem"><a href="http://www.audible.com/" class="nav_a">Audible<br> <span class="navFooterDescText">Download<br> Audio Books</span></a></td>
-<td class="navFooterDescSpacer" style="width: 4%"></td>
-<td class="navFooterDescItem"><a href="http://www.diapers.com/" class="nav_a">Diapers.com<br> <span class="navFooterDescText">Everything<br> But The Baby</span></a></td>
-<td class="navFooterDescSpacer" style="width: 4%"></td>
-<td class="navFooterDescItem"><a href="http://www.dpreview.in/" class="nav_a">DPReview<br> <span class="navFooterDescText">Digital<br> Photography</span></a></td>
-<td class="navFooterDescSpacer" style="width: 4%"></td>
-<td class="navFooterDescItem"><a href="http://www.imdb.in/" class="nav_a">IMDb<br> <span class="navFooterDescText">Movies, TV<br> &amp; Celebrities</span></a></td>
-</tr>
-<tr><td>&nbsp;</td></tr>
-<tr>
-<td class="navFooterDescItem"><a href="http://www.junglee.com/" class="nav_a">Junglee.com<br> <span class="navFooterDescText">Shop Online<br> in India</span></a></td>
-<td class="navFooterDescSpacer" style="width: 4%"></td>
-<td class="navFooterDescItem"><a href="http://www.look.com/" class="nav_a">Look.com<br> <span class="navFooterDescText">Kids' Clothing<br> &amp; Shoes</span></a></td>
-<td class="navFooterDescSpacer" style="width: 4%"></td>
-<td class="navFooterDescItem"><a href="http://www.myhabit.com/" class="nav_a">MYHABIT<br> <span class="navFooterDescText">Private Fashion<br> Designer Sales</span></a></td>
-<td class="navFooterDescSpacer" style="width: 4%"></td>
-<td class="navFooterDescItem"><a href="http://www.shopbop.com/" class="nav_a">Shopbop<br> <span class="navFooterDescText">Designer<br> Fashion Brands</span></a></td>
-<td class="navFooterDescSpacer" style="width: 4%"></td>
-<td class="navFooterDescItem"><a href="http://www.yoyo.com/" class="nav_a">Yoyo.com<br> <span class="navFooterDescText">A Happy Place<br> To Shop For Toys</span></a></td>
-<td class="navFooterDescSpacer" style="width: 4%"></td>
-<td class="navFooterDescItem"><a href="https://www.amazonbusiness.in/" class="nav_a">	
-Amazon Business<br> <span class="navFooterDescText">Everything For<br> Your Business</span></a></td>
-</tr>
-</tbody></table></div>
-
-<div class="navFooterLine navFooterLinkLine navFooterPadItemLine navFooterCopyright"><ul><li class="nav_first"><a href="/gp/help/customer/display.html/ref=footer_cou?ie=UTF8&amp;nodeId=200545940" class="nav_a">Conditions of Use &amp; Sale</a></li><li><a href="/gp/help/customer/display.html/ref=footer_privacy?ie=UTF8&amp;nodeId=200534380" class="nav_a">Privacy Notice</a></li><li class="nav_last"><a href="/b/ref=footer_iba?ie=UTF8&amp;node=6691071031" class="nav_a">Interest-Based Ads</a></li></ul><span>© 1996-2017, Amazon.com, Inc. or its affiliates</span><ul></ul></div>
-</div>
+<footer>
+  <div class="centered clearfix">
+    <div class="footer-logo">
+      <img class="logo" src="http://brolik.com/images/BRO_logo.svg">
+      <div class="social">
+        <a href="https://www.facebook.com/" class="facebook">
+          <svg viewBox="0 0 33 33"><g><path d="M 17.996,32L 12,32 L 12,16 l-4,0 l0-5.514 l 4-0.002l-0.006-3.248C 11.993,2.737, 13.213,0, 18.512,0l 4.412,0 l0,5.515 l-2.757,0 c-2.063,0-2.163,0.77-2.163,2.209l-0.008,2.76l 4.959,0 l-0.585,5.514L 18,16L 17.996,32z"></path></g></svg>
+        </a>
+        <a href="https://twitter.com/" class="twitter">
+          <svg viewBox="0 0 33 33"><g><path d="M 32,6.076c-1.177,0.522-2.443,0.875-3.771,1.034c 1.355-0.813, 2.396-2.099, 2.887-3.632 c-1.269,0.752-2.674,1.299-4.169,1.593c-1.198-1.276-2.904-2.073-4.792-2.073c-3.626,0-6.565,2.939-6.565,6.565 c0,0.515, 0.058,1.016, 0.17,1.496c-5.456-0.274-10.294-2.888-13.532-6.86c-0.565,0.97-0.889,2.097-0.889,3.301 c0,2.278, 1.159,4.287, 2.921,5.465c-1.076-0.034-2.088-0.329-2.974-0.821c-0.001,0.027-0.001,0.055-0.001,0.083 c0,3.181, 2.263,5.834, 5.266,6.438c-0.551,0.15-1.131,0.23-1.73,0.23c-0.423,0-0.834-0.041-1.235-0.118 c 0.836,2.608, 3.26,4.506, 6.133,4.559c-2.247,1.761-5.078,2.81-8.154,2.81c-0.53,0-1.052-0.031-1.566-0.092 c 2.905,1.863, 6.356,2.95, 10.064,2.95c 12.076,0, 18.679-10.004, 18.679-18.68c0-0.285-0.006-0.568-0.019-0.849 C 30.007,8.548, 31.12,7.392, 32,6.076z"></path></g></svg>
+        </a>
+        <a href="https://www.linkedin.com/" class="linkedin">
+          <svg viewBox="0 0 512 512"><g><path d="M186.4 142.4c0 19-15.3 34.5-34.2 34.5 -18.9 0-34.2-15.4-34.2-34.5 0-19 15.3-34.5 34.2-34.5C171.1 107.9 186.4 123.4 186.4 142.4zM181.4 201.3h-57.8V388.1h57.8V201.3zM273.8 201.3h-55.4V388.1h55.4c0 0 0-69.3 0-98 0-26.3 12.1-41.9 35.2-41.9 21.3 0 31.5 15 31.5 41.9 0 26.9 0 98 0 98h57.5c0 0 0-68.2 0-118.3 0-50-28.3-74.2-68-74.2 -39.6 0-56.3 30.9-56.3 30.9v-25.2H273.8z"></path></g></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-contact">
+       <h3><a href="">Contact</a></h3>
+       <p><a href="mailto:">fake@fake.com</a></p>
+       <p><a href="tel:">123-456-7890</a></p>
+       <p><a href="">123 Fake St<br />Fake, PA 11111</a></p>
+    </div>
+    <div class="footer-navigation">
+      <div class="footer-links-holder">
+        <h3><a href="">Section 1</a></h3>
+        <ul class="footer-links">
+          <li><a href="">Page Title 1</a></li>
+          <li><a href="">Page Title 2</a></li>
+          <li><a href="">Page Title 3</a></li>
+          <li><a href="">Page Title 4</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-holder">
+        <h3><a href="">Section 2</a></h3>
+        <ul class="footer-links">
+          <li><a href="">Page Title 1</a></li>
+          <li><a href="">Page Title 2</a></li>
+          <li><a href="">Page Title 3</a></li>
+          <li><a href="">Page Title 4</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-holder">
+        <h3><a href="">Section 3</a></h3>
+        <ul class="footer-links">
+          <li><a href="">Page Title 1</a></li>
+          <li><a href="">Page Title 2</a></li>
+          <li><a href="">Page Title 3</a></li>
+          <li><a href="">Page Title 4</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-bar">
+      All Rights Reserved © 2016 | <a href="">Privacy Policy</a> | <a href="">Terms of Service</a>
+  </div>
+</footer>
+<script src="../../resources/footer/footer.js"></script>
 </body>
 </html>

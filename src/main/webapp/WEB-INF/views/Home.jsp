@@ -16,11 +16,9 @@
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet"
-	href="<c:url value="/resources/Styles/Home.css"/>">
-<script>
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	href="<c:url value="/resources/footer.css"/>">
+	
+
 <body>
 	
 	<c:url var="back" value="resources/images/game.jpg"></c:url>
@@ -32,7 +30,7 @@
 	</center>
 	<div>
 		<center>
-			<h2 style="color: green; font-family: fantasy;">NKART</h2>
+			<h2 style="color:white ;font-family: fantasy;">NKART</h2>
 			<h3 style="color: red; font-family: cursive;">Shopping is an art</h3>
 
 
@@ -93,6 +91,7 @@
 	</c:if> --%>
 	
 	<!-- *************************************************************************************** -->
+	<div>
 	<c:if test="${UserClickednavproduct!=true}">
 	<c:if test="${empty LoggedIn}">
 
@@ -134,11 +133,88 @@
 	</c:choose>
 	</c:if>
 	</c:if>
+	</div>
 	
 	<!--******************************************************************************************  -->
-
-	<%-- <div align="bottom">
-<jsp:include page="Footer.jsp"></jsp:include>
-</div> --%>
+<br>
+<br>
+<br>
+	
+					
+					
+					<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<footer>
+    <div class="footer" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+                    <h3>COMPANY</h3>
+                    <ul>
+                        <li> <a href="#">About Us </a> </li>
+                        <li> <a href="#">Terms & Conditions </a> </li>
+                        <li> <a href="#">Privacy Policy </a> </li>
+                        <li> <a href="#">Updates & Releases </a> </li>
+                        
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+                    <h3> Contact Us </h3>
+                    <ul>
+                       <li> <a href="#">Contact Us </a> </li>
+                        <li> <a href="#">FAQ's </a> </li>
+                        <li> <a href="#">Cookie Policy</a> </li>
+                        <li> <a href="#">Design</a> </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+                    <h3> NKART </h3>
+                    <ul>
+                        <li> <a href="#">Get Started </a> </li>
+                        <li> <a href="#">Security </a> </li>
+                        <li> <a href="#">Buy </a> </li>
+                        <li> <a href="#">Address</a> </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3  col-md-3 col-sm-6 col-xs-12 ">
+                    <h3>Queries?Mail us</h3>
+                    <ul>
+                        <li>
+                            <div class="input-append newsletter-box text-center">
+                                <input type="text" class="full text-center" placeholder="Email ">
+                                <button class="btn  bg-gray" type="button"> GO <i class="fa fa-long-arrow-right"> </i> </button>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="social">
+                        <li> <a href="#"> <i class=" fa fa-facebook">   </i> </a> </li>
+                        <li> <a href="#"> <i class="fa fa-twitter">   </i> </a> </li>
+                        <li> <a href="#"> <i class="fa fa-google-plus">   </i> </a> </li>
+                        <li> <a href="#"> <i class="fa fa-pinterest">   </i> </a> </li>
+                        <li> <a href="#"> <i class="fa fa-youtube">   </i> </a> </li>
+                    </ul>
+                </div>
+            </div>
+            <!--/.row--> 
+        </div>
+        <!--/.container--> 
+    </div>
+    <!--/.footer-->
+    
+    <div class="footer-bottom">
+        <div class="container">
+            <p class="pull-left"> Copyright © 2017 nkart.com. All right reserved. </p>
+            <div class="pull-right">
+                <ul class="nav nav-pills payments">
+                    <li><i class="fa fa-cc-visa"></i></li>
+                    <li><i class="fa fa-cc-mastercard"></i></li>
+                    <li><i class="fa fa-cc-amex"></i></li>
+                    <li><i class="fa fa-cc-paypal"></i></li>
+                </ul> 
+            </div>
+        </div>
+    </div>
+    <!--/.footer-bottom--> 
+</footer>
 </body>
 </html>

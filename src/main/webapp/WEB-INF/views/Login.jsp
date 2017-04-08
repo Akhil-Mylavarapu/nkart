@@ -165,8 +165,8 @@
     </form>
   </div>
   <div class="card alt">
-    <div class="toggle"></div>
-    <h1 class="title">Register
+    <div  class="toggle"></div>
+    <h1  class="title"><a href="Registration">Register</a>
       <div class="close"></div>
     </h1>
    <%--  <form action="Registration" method="post" id="registratin">
