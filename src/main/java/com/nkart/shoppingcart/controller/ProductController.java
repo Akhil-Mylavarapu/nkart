@@ -99,7 +99,7 @@ public class ProductController {
 	@RequestMapping(value="/manage_Update_product")
 	public String updateCategory(@ModelAttribute("product") Product product,HttpServletRequest request)
 	{
-		
+		log.debug("Starting of the method updateCateory");
 		productDAO.updateProduct(product);
 		MultipartFile file=product.getImage();
 		String rootDirectory = request.getSession().getServletContext().getRealPath("/");
@@ -115,6 +115,7 @@ public class ProductController {
                 throw new RuntimeException("item image saving failed.", e);
             }
         }
+        log.debug("Ending of the method updateCategory");
 		return "redirect:/manage_Products";
 	
 	}

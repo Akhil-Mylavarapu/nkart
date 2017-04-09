@@ -97,19 +97,9 @@ public class HomeController {
 		return mv;
 	}
 		
-	/*@RequestMapping("/Logout")
-	public ModelAndView Logout() {
-		System.err.println("normal login????????????");
-		ModelAndView mv = new ModelAndView("/Home");
-		// session.invalidate(); //to remove all the values from the session
-		session.removeAttribute("loginMessage"); // to remove only particular
-													// value
-		return mv;
-	}*/
-
 	@RequestMapping("/Home")
 	public ModelAndView showHome1Page() {
-		
+		log.debug("Starting of the method ShowHome1 page");
 		ModelAndView mv = new ModelAndView("/Home");
 		session.setAttribute("category", category); // domain object names
 		session.setAttribute("product", product);
@@ -121,7 +111,7 @@ public class HomeController {
 		session.setAttribute("supplierList", supplierDAO.getAllSuppliers());
 
 		session.setAttribute("productList", productDAO.getAllProducts());
-
+		log.debug("Ending of the method showHome1 Page");
 		return mv;
 
 	}
@@ -136,7 +126,10 @@ public class HomeController {
 		mv.addObject("userdetails",userDAO.getUserByName(name));*/
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 	      String name = auth.getName(); //get logged in username
-	    session.setAttribute("userList", userDAO.getUserByName(name));
+	    session.setAttribute("userList", userDAO.getAllUsers());
+	    session.setAttribute("user",userDAO.getUserByName(name));
+	    User details=userDAO.getUserByName(name);
+	    System.err.println("details"+user);
 	   session.setAttribute("contact",user.getContact());
 	      model.addAttribute("username", name);
 	      System.err.println("username++++++++++++++++++++++++++++++++++"+name);
@@ -146,24 +139,23 @@ public class HomeController {
 
 	}
 	 @RequestMapping(value ="ShowProduct/{id}" )
-	    public String ShowProduct(@PathVariable("id") int id,RedirectAttributes attributes,Model m) {
+	    public String ShowProduct(@PathVariable("id") int id,RedirectAttributes attributes,Model m)
+	 {
+		 	log.debug("Starting of the method ShowProduct");
 	        m.addAttribute("UserClickedshowproduct", "true");
 	        m.addAttribute("IndividualProduct", productDAO.getproduct(id));
+	        log.debug("Ending of the method showProduct");
 	    	return "ShowProduct";
 	    }
 	 
 	 @RequestMapping(value="navproducts/{id}")
 	    public String navproduct(Model m,@PathVariable("id") int id ,RedirectAttributes attributes){
-	    	
+	    	log.debug("Starting of the method navproducts");
 	    	m.addAttribute("navproducts", productDAO.navproduct(id));
 	    	m.addAttribute("UserClickednavproduct", "true");
 	    	attributes.addFlashAttribute("navproducts", productDAO.navproduct(id));
+	    	log.debug("Ending of the method navproducts");
 	    	return "redirect:/";
 	    }
-	/* @RequestMapping(value="navproduct/{id}")
-		public String navproduct(Model m,@PathVariable("id") int id){
-			m.addAttribute("Clickedcatproduct", "true");
-		m.addAttribute("navproducts", productDAO.navproduct(id));
-			return "catproducts";
-		}*/
+	
 }

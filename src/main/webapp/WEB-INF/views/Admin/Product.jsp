@@ -110,14 +110,14 @@
 		<h2>products</h2>
 		<table border="2">
 			<thead>
-				<tr>
+				<tr align="center">
 					<th align="center">ID</th>
 					<th align="center">NAME</th>
 					<th align="center">PRICE</th>
 					<th align="center">DESCRIPTION</th>
 					<th align="center">CATEGORY_ID</th>
 					<th align="center">SUPPLIER_ID</th>
-					<th width="10" height="10">URL</th>
+					<th align="center">URL</th>
 					<th>IMAGE</th>
 					<th>ACTION</th>
 				</tr>

@@ -33,7 +33,7 @@
 
 					<tr>
 
-						<td style="color: red"><form:label path="id">
+						<td><form:label path="id">
 								<spring:message text="Id" />
 							</form:label></td>
 
@@ -47,14 +47,14 @@
 							</c:otherwise>
 						</c:choose>
 					<tr>
-						<td style="color: red"><form:label path="name">
+						<td><form:label path="name">
 								<spring:message text="Name" />
 							</form:label></td>
 						<td><form:input path="name" required="true" /></td>
 					</tr>
 
 					<tr>
-						<td style="color: red"><form:label path="description">
+						<td><form:label path="description">
 								<spring:message text="Description" />
 							</form:label></td>
 						<td><form:input path="description" required="true" /></td>
@@ -82,10 +82,10 @@
 			<table class="tg" border="2">
 				<thead>
 					<tr>
-						<td style="color: red">ID</td>
-						<td style="color: red">NAME</td>
-						<td style="color: red">DESCRIPTION</td>
-						<td style="color: red">Action</td>
+						<td>ID</td>
+						<td>NAME</td>
+						<td>DESCRIPTION</td>
+						<td>Action</td>
 					</tr>
 				</thead>
 
@@ -95,9 +95,9 @@
 				<c:forEach var="category" items="${categoryList}">
 
 					<tr>
-						<td style="color: red">${category.id}</td>
-						<td style="color: red">${category.name}</td>
-						<td style="color: red">${category.description}</td>
+						<td>${category.id}</td>
+						<td>${category.name}</td>
+						<td>${category.description}</td>
 
 						<td><a href="manage_Edit_Category/${category.id}">Edit </a>||
 							<a href="manage_Delete_Category/${category.id}">Delete</a></td>

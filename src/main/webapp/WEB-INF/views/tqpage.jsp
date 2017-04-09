@@ -29,23 +29,22 @@ width:100%;
 </head>
 <body  style="background-color:#ffffff;">
 
+<center>
+		<img src="<c:url value="resources/images/Autobot.gif"></c:url>"
+			alt="logo" width="100px" height="80px" align="left">
+	</center>
+	<div>
+		<center>
+			<h2 style="color:cyan ;font-family: fantasy;">NKART</h2>
+			<h3 style="color: red; font-family: cursive;">Shopping is an art</h3>
 
 
-<!--  <div class="text-left" >
-  <h1 style="font-family:Georgia; font-size:30px;"><i>SHOPIN </i>
-    <img  src="https://www.sitewelder.com/art2012/logo-big-shopping.png" alt="logo" width="40px" height="40px" align="left" >
-  <img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/768px-F_icon.svg.png" alt="fb" width="25px" height="25px" align="right" >
-  <img  src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Twitter_bird_logo_2012.svg/1259px-Twitter_bird_logo_2012.svg.png" alt="twitter" width="25px" height="25px" align="right" >
-  <img  src="http://icons.iconarchive.com/icons/danleech/simple/1024/linkedin-icon.png" alt="linkedin" width="25px" height="25px" align="right" >
-  </h1>
-  
-  </div> -->
-  
-     <nav class="navbar navbar-inverse navbar-fixed-top">
+		</center>
+	</div>
+     <nav class="navbar navbar-inverse">
   <div class="container-fluid"> 
   <div class="navbar-header" class=" pull-left">
-  <a class="navbar-brand" style="font-size:27px;margin-top: -4px;">
-     <i class="fa fa-opencart" aria-hidden="true"></i>Nkart </a>
+  
     <sec:authorize access="isAuthenticated()">
      <a class="navbar-brand" style="font-size:15px;"><span class="glyphicon glyphicon-user"></span> WELCOME <sec:authentication property="principal.username"/> </a>
      
@@ -58,7 +57,7 @@ width:100%;
      <li><a href="<c:url value="/perform_logout" />">Logout</a></li>
       <li><a href="Login">LOGIN</a></li>
       </sec:authorize>
-	  <li><a href="CONTACTUS">CONTACT US</a></li>
+	  <li><a href="#">CONTACT US</a></li>
    <sec:authorize access="isAuthenticated()">
    <li ><a href="Cart" ><p>CART <span class="glyphicon glyphicon-shopping-cart"></span></p></a></li>
 	<li><a href="<c:url value="/perform_logout" />"><p>LOGOUT<span class="glyphicon glyphicon-log-out"></span></p></a></li>

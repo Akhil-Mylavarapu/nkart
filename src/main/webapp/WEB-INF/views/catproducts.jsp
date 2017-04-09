@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
@@ -8,9 +9,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
-<link href="<c:url value="/resources/css/itempage.css" />"
-	rel="stylesheet">
-	
+
 <style type="text/css">
 #product
 {
@@ -43,7 +42,7 @@ $(document).ready(function(){
 					<%-- <img height="192px" width="192px"  alt="${product.id}"
 						src="<c:url value="/resources/images/product/${product.id}.jpg"></c:url>"></a> --%>
 					<div class="desc">
-						<p>
+						<p style="color: white">
 
 							${product.name}<br> <i class="fa fa-inr" aria-hidden="true"></i>
 							${product.price}

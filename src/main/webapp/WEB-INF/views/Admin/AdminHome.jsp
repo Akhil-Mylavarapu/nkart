@@ -13,15 +13,19 @@ body {
 </style>
 </head>
 <c:url var="back" value="resources/images/callofduty.jpg"></c:url>
-<body style="background-image: url(${back});background-repeat: no-repeat;
+<body
+	style="background-image: url(${back});background-repeat: no-repeat;
     background-attachment: fixed">
+	<center>
+		<img src="<c:url value="resources/images/Autobot.gif"></c:url>"
+			alt="ShoppingCartPic" width="100px" height="80px" align="left">
+	</center>
 	<div>
-		<h2 style="color: green; font-family: fantasy;">NKART</h2>
-		<h3 style="color: red; font-family: cursive;">Shopping is an art</h3>
-
 		<center>
-			<img src="<c:url value="/resources/images/giphy.gif"></c:url>"
-				alt="ShoppingCartPic" width="100px" height="100px" align="middle">
+			<h2 style="color: cyan; font-family: fantasy;">NKART</h2>
+			<h3 style="color: red; font-family: cursive;">Shopping is an art</h3>
+
+
 		</center>
 	</div>
 	<center>
@@ -30,25 +34,21 @@ body {
 			<jsp:include page="../menu/AdminCategoryMenu.jsp"></jsp:include>
 		</c:if>
 
-		<%-- <c:if test="${isUserClickedCategories==true||isUserClickedProducts==true||isUserClickedSuppliers==true}">
-<jsp:include page="../menu/AdminCategoryMenu.jsp"></jsp:include>
-</c:if> --%>
 		<c:if test="${isAdminClickedCategories==true}">
-			<%-- 	<jsp:include page="../menu/AdminCategoryMenu.jsp"></jsp:include> --%>
+
 			<jsp:include page="Category.jsp"></jsp:include>
 		</c:if>
 
 		<c:if test="${isAdminClickedProducts==true}">
-			<%-- <jsp:include page="../menu/AdminCategoryMenu.jsp"></jsp:include> --%>
+
 			<jsp:include page="Product.jsp"></jsp:include>
 		</c:if>
 
 		<c:if test="${isAdminClickedSuppliers==true}">
-			<%-- 	<jsp:include page="../menu/AdminCategoryMenu.jsp"></jsp:include>
- --%>
+
 			<jsp:include page="Supplier.jsp"></jsp:include>
 		</c:if>
 	</center>
-
 </body>
+
 </html>

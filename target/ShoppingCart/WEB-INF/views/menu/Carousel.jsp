@@ -37,48 +37,48 @@
     <div class="carousel-inner" role="listbox">
 
       <div class="item active">
-        <img src="resources/images/carosel1.jpg" alt="Lie of Pi" width="460" height="345">
+        <a href="ShowProduct/70"><img  src="resources/images/carosel1.jpg" alt="Lie of Pi" width="460" height="345"></a>
         <div class="carousel-caption">
-          <h3>Life of Pi</h3>
-          <p>Pi Patel finds a way to survive in a life-boat that is adrift in the middle of nowhere. His fight against the odds is heightened by the company of a hyena and a male Bengal tiger.</p>
+          <h3 align="left" style="color: blue">Life of Pi</h3>
+          <!-- <p style="color:black">Pi Patel finds a way to survive in a life-boat that is adrift in the middle of nowhere. His fight against the odds is heightened by the company of a hyena and a male Bengal tiger.</p> -->
         </div>
       </div>
 
       <div class="item">
-        <img src="resources/images/carosel2.jpg" alt="Captain America:Civil War" width="460" height="345">
+       <a href="ShowProduct/72"><img src="resources/images/carosel2.jpg" alt="Captain America:Civil War" width="460" height="345"></a>
         <div class="carousel-caption">
-          <h3>Captain America:Civil War</h3>
-          <p>Political pressure mounts to install a system of accountability when the actions of the Avengers lead to collateral damage. The new status quo deeply divides members of the team. Captain America (Chris Evans) believes superheroes should remain free to defend humanity without government interference. Iron Man (Robert Downey Jr.) sharply disagrees and supports oversight. As the debate escalates into an all-out feud, Black Widow (Scarlett Johansson) and Hawkeye (Jeremy Renner) must pick a side.</p>
+          <h3 align="left" style="color: white">Captain America:Civil War</h3>
+          <!-- <p style="color: white">Political pressure mounts to install a system of accountability when the actions of the Avengers lead to collateral damage.</p> -->
         </div>
       </div>
     
       <div class="item">
-        <img src="resources/images/carosel4.jpg" alt="Bahubali:The Beginning" width="460" height="345">
+       <a href="ShowProduct/69"><img src="resources/images/carosel4.jpg" alt="Bahubali:The Beginning" width="460" height="345"></a>
         <div class="carousel-caption">
-          <h3>Bahubali:The Beginning </h3>
-          <p>In the kingdom of Mahishmati, while pursuing his love, Shivudu learns about the conflict-ridden past of his family and his legacy. He must now prepare himself to face his new-found archenemy.</p>
+          <h3 align="left" style="color: red">Bahubali:The Beginning </h3>
+          <!-- <p style="color: red">In the kingdom of Mahishmati, while pursuing his love, Shivudu learns about the conflict-ridden past of his family and his legacy. He must now prepare himself to face his new-found archenemy.</p> -->
         </div>
       </div>
 
       <div class="item">
-        <img src="resources/images/carosel5.jpg" alt="Rise of The Tomb Raider" width="460" height="345">
+       <a href="ShowProduct/71"><img src="resources/images/carosel5.jpg" alt="Rise of The Tomb Raider" width="460" height="345"></a>
         <div class="carousel-caption">
-          <h3>Rise of The Tomb Raider</h3>
-          <p>Rise of the Tomb Raider is an action-adventure video game developed by Crystal Dynamics and published by Square Enix. It is the sequel to the 2013 video game Tomb Raider, a reboot of the Tomb Raider franchise.</p>
+          <h3 align="left">Rise of The Tomb Raider</h3>
+          <!-- <p>Rise of the Tomb Raider is an action-adventure video game developed by Crystal Dynamics and published by Square Enix. It is the sequel to the 2013 video game Tomb Raider, a reboot of the Tomb Raider franchise.</p> -->
         </div>
       </div>
        <div class="item">
-        <img src="resources/images/carosel6.jpg" alt="Assassin's Creed II" width="460" height="345">
+       <a href="ShowProduct/74"> <img src="resources/images/carosel6.jpg" alt="Assassin's Creed II" width="460" height="345"></a>
         <div class="carousel-caption">
-          <h3>Assassin's Creed II</h3>
-          <p>Assassin's Creed II is a 2009 action-adventure video game developed by Ubisoft Montreal and published by Ubisoft.</p>
+          <h3 align="left" style="color: black">Assassin's Creed II</h3>
+          <!-- <p>Assassin's Creed II is a 2009 action-adventure video game developed by Ubisoft Montreal and published by Ubisoft.</p> -->
         </div>
       </div>
        <div class="item">
-        <img src="resources/images/carosel7.jpg" alt="Hitman" width="460" height="345">
+       <a href="ShowProduct/73"><img src="resources/images/carosel7.jpg" alt="Hitman" width="460" height="345"></a>
         <div class="carousel-caption">
-          <h3>Hitman</h3>
-          <p>Hitman is an episodic stealth video game developed by IO Interactive and published by Square Enix for Microsoft Windows, PlayStation 4, and Xbox One. A port for Linux, developed and published by Feral Interactive, was released on 16 February 2017</p>
+          <h3 align="left">Hitman</h3>
+          <!-- <p>Hitman is an episodic stealth video game developed by IO Interactive and published by Square Enix for Microsoft Windows, PlayStation 4, and Xbox One. A port for Linux, developed and published by Feral Interactive, was released on 16 February 2017</p> -->
         </div>
       </div>
   

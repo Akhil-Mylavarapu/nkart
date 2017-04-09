@@ -24,7 +24,8 @@ http://www.springframework.org/schema/security/spring-security.xsd">
 		<security:intercept-url pattern="/delete*/**" access="hasRole('ROLE_USER')" />
 		<security:intercept-url pattern="/editorder/**" access="hasRole('ROLE_USER')" />
 		<security:intercept-url pattern="/placeorder/**" access="hasRole('ROLE_USER')" />
-		<security:intercept-url pattern="/pay/**" access="hasRole('ROLE_USER')" />		
+		<security:intercept-url pattern="/pay/**" access="hasRole('ROLE_USER')" />	
+		<security:intercept-url pattern="/ShowProduct/addtoCart/**" access="hasRole('ROLE_USER')" />		
 
 		<security:form-login login-page="/Login"
 			default-target-url="/" login-processing-url="/perform_login"

@@ -17,11 +17,6 @@ import com.nkart.shoppingcart.domain.Category;
 import com.nkart.shoppingcart.domain.Product;
 import com.nkart.shoppingcart.domain.Supplier;
 
-
-
-
-
-
 @Controller
 public class AdminController {
 

@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
@@ -8,9 +9,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
-<link href="<c:url value="/resources/css/itempage.css" />"
-	rel="stylesheet">
-	
+
 <style type="text/css">
 #product
 {
@@ -28,9 +27,9 @@ $(document).ready(function(){
 
 </head>
 <body style="padding-top: 60px">
-<script>
-document.body.style.backgroundImage = "url('resources/images/BackgroundImage.jpg')";
-</script>
+<c:url var="back" value="resources/images/game.jpg"></c:url>
+<body style=" background-image: url(${back});background-repeat: no-repeat;
+    background-attachment: fixed">
 		<div class="container">
 		<c:forEach items="${navproducts}" var="product">
 			<div class="col-xs-3 w3-animate-zoom">
@@ -43,7 +42,7 @@ document.body.style.backgroundImage = "url('resources/images/BackgroundImage.jpg
 					<%-- <img height="192px" width="192px"  alt="${product.id}"
 						src="<c:url value="/resources/images/product/${product.id}.jpg"></c:url>"></a> --%>
 					<div class="desc">
-						<p>
+						<p style="color: white">
 
 							${product.name}<br> <i class="fa fa-inr" aria-hidden="true"></i>
 							${product.price}

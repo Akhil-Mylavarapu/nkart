@@ -10,8 +10,10 @@
 	uri="http://www.springframework.org/security/tags"%>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>NKART Home Page</title>
-
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<c:url var="back" value="resources/images/try.jpg"></c:url>
+<body style=" background-image: url(${back});background-repeat: no-repeat;
+    background-attachment: fixed">
 </head>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -21,22 +23,19 @@
 
 <body>
 	
-	<c:url var="back" value="resources/images/game.jpg"></c:url>
-<body style=" background-image: url(${back});background-repeat: no-repeat;
-    background-attachment: fixed">
+	
 	<center>
-		<img src="<c:url value="resources/images/giphy.gif"></c:url>"
-			alt="ShoppingCartPic" width="100px" height="80px" align="left">
+		<img src="<c:url value="resources/images/Autobot.gif"></c:url>"
+			alt="logo" width="100px" height="80px" align="left">
 	</center>
 	<div>
 		<center>
-			<h2 style="color:white ;font-family: fantasy;">NKART</h2>
+			<h2 style="color: cyan ;font-family: fantasy;">NKART</h2>
 			<h3 style="color: red; font-family: cursive;">Shopping is an art</h3>
 
 
 		</center>
 	</div>
-	
 	<c:if test="${isAdmin!=true}">
 		<jsp:include page="menu/CustomerCategoryMenu.jsp"></jsp:include>
 		<jsp:include page="menu/Carousel.jsp"></jsp:include>
@@ -161,10 +160,12 @@
                 <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
                     <h3> Contact Us </h3>
                     <ul>
-                       <li> <a href="#">Contact Us </a> </li>
-                        <li> <a href="#">FAQ's </a> </li>
-                        <li> <a href="#">Cookie Policy</a> </li>
-                        <li> <a href="#">Design</a> </li>
+                       <!-- <li> <a href="#">Contact Us </a> </li>
+                        <li> <a href="#">FAQ's </a> </li> -->
+                        <li><i class="fa fa-phone" style="font-size:24px"></i> +91 8919887370</li>
+                        <li><i class="fa fa-envelope" style="font-size:24px"></i> support@nkart.com</li>
+                         <li> <i class="fa fa-address-book" style="font-size:24px"></i> Address</li>
+                        <li><i class="fa fa-cart-plus" style="font-size:24px"></i> Buy</li>
                     </ul>
                 </div>
                 <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
@@ -172,10 +173,26 @@
                     <ul>
                         <li> <a href="#">Get Started </a> </li>
                         <li> <a href="#">Security </a> </li>
-                        <li> <a href="#">Buy </a> </li>
-                        <li> <a href="#">Address</a> </li>
+                        <li> <a href="#">Cookie Policy</a> </li>
+                        <li> <a href="#">Design</a> </li>
+                       
+                        
+                       
                     </ul>
                 </div>
+                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+                    <h3>mobile apps</h3>
+                    <ul>
+                    <li><i class="fa fa-globe" style="font-size:24px"></i>Mobile Site</li>
+                    <li><i class="fa fa-android" style="font-size:24px"></i>Android</li>
+                    <li><i class="fa fa-apple" style="font-size:24px"></i>ios</li>
+                    <li><i class="fa fa-windows" style="font-size:24px"></i>Windows Mobile</li>
+                        
+                    
+                        
+                    </ul>
+                </div>
+                &nbsp;
                 <div class="col-lg-3  col-md-3 col-sm-6 col-xs-12 ">
                     <h3>Queries?Mail us</h3>
                     <ul>
@@ -194,6 +211,7 @@
                         <li> <a href="#"> <i class="fa fa-youtube">   </i> </a> </li>
                     </ul>
                 </div>
+               
             </div>
             <!--/.row--> 
         </div>

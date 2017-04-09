@@ -21,18 +21,19 @@
 					</tr>
 				</thead>
 
+<c:set var="name"></c:set>
 
-
-				<%-- <c:forEach var="user" items="${user}"> --%>
-				<c:if test="${ not empty userList}">
+				<%-- <c:forEach var="name" items="${userList}"> --%>
+				<%-- <c:if test="${ not empty userList}"> --%>
 				
 									<tr>
-						<td style="color: red">${name}</td>
-						<td style="color: red">${contact}</td>
-						<td style="color: red">${email}</td>
+						<td style="color: red">${user.name}</td>
+						<td style="color: red">${user.contact}</td>
+						<td style="color: red">${user.email}</td>
 						
 						</tr>
-						</c:if>
+						<%-- </c:param> --%>
+						<%-- </c:if> --%>
 						<%-- </c:forEach> --%>
 						</table>
 						</form:form>

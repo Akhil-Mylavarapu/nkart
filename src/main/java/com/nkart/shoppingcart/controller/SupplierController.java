@@ -49,7 +49,7 @@ public class SupplierController {
 		model.addAttribute("isAdminClickedSupplier", "true");
 		
 		log.debug(" Ending of the method createSupplier");
-		return "forward:/manage_Suppliers";
+		return "redirect:/manage_Suppliers";
 	}
 
 	@RequestMapping("/manage_Delete_Supplier/{id}")
@@ -58,33 +58,35 @@ public class SupplierController {
 		log.debug("Starting of the method deleteSupplier");
 		supplier.setId(id);
 		boolean flag = supplierDAO.deleteSupplier(supplier);
-
-		String msg = "Successfully deleted the supplier";
+		model.addAttribute("Message","successfully deleted supplier");
+		
 		
 		if (flag != true) 
 		{
-			msg = "Not able to delete the supplier";
+			model.addAttribute("Message","supplier not deleted");
 		}
-		model.addAttribute("Message", msg);
+		
 		
 		log.debug("Ending of the method deleteSupplier");
-		return "forward:/manage_Suppliers";
+		return "redirect:/manage_Suppliers";
 	}
 
 	@RequestMapping(value="/manage_Edit_Supplier/{id}", method = RequestMethod.GET)
 	public String editSupplier(@PathVariable("id") int id,RedirectAttributes attributes) {
+		log.debug("Starting of the method editSupplier");
 			supplier.setId(id);	
            attributes.addFlashAttribute("supplier", this.supplierDAO.getSupplierById(id));
 		
-	
+           log.debug("Ending of the method editSupplier");
 		return "redirect:/manage_Suppliers";
 	}
 	
 	@RequestMapping(value="/manage_Update_supplier")
 	public String updateCategory(@ModelAttribute("supplier") Supplier supplier)
 	{
-		
+		log.debug("Starting of the method updateSupplier");
 		supplierDAO.updateSupplier(supplier);
+		log.debug("Ending of the method updateSupplier");
 		return "redirect:/manage_Suppliers";
 	
 	}

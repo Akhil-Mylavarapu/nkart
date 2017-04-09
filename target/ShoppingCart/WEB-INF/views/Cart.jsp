@@ -18,24 +18,24 @@
 </style>
 </head>
 <body>
-<h1 align="center" style="margin-top:60px; color: red">Your Cart</h1>
-<h4 align="left" style="color: red">${emptycart}</h4>
+<h1 align="center" style="margin-top:60px; color: white">Your Cart</h1>
+<h4 align="left" style="color: white">${emptycart}</h4>
 <div class="container">
-	<table id="cart" class="table table-hover table-condensed">
+	<table id="cart" class="table table-condensed">
     				<thead>
 						<tr>
-							<th style="width:50%;color: red">Product</th>
-							<th style="width:10%;color: red">Price</th>
-							<th style="width:8%;color: red">Quantity</th>
+							<th style="width:50%;color: white">Product</th>
+							<th style="width:10%;color: white">Price</th>
+							<th style="width:8%;color: white">Quantity</th>
 							<!-- <th style="width:10%">Date Added</th> -->
-							<th style="width:22%;color: red" class="text-center">Update</th>
-							<th style="width:10%;color: red"></th>
+							<th style="width:22%;color: white" class="text-center">Update</th>
+							<th style="width:10%;color: white"></th>
 						</tr>
 					</thead>
 					<tbody>
 					<c:forEach items="${CartList}" var="cart">
 						<tr>
-							<td style="color: red" data-th="Product">
+							<td style="color: white" data-th="Product">
 								<div class="row">
 									<div class="col-sm-2 hidden-xs"><img src="<c:url value="/resources/images/${cart.productid}.jpg"></c:url>" alt="" class="img-responsive"/></div>
 									<div class="col-sm-10">
@@ -43,17 +43,17 @@
 									</div>
 								</div>
 							</td>
-							<td style="color: red" data-th="Price"><c:out value="${cart.price }"/></td>
+							<td style="color: white" data-th="Price"><c:out value="${cart.price }"/></td>
 							<%-- <td data-th="Date Added"><c:out value="${cart.addedDate}"/></td> --%>
-							<td style="color: red" data-th="Quantity"><c:out value="${cart.quantity }"/></td>
-							<td style="color: red" data-th="Quantity">
+							<td style="color: white" data-th="Quantity"><c:out value="${cart.quantity}"/></td>
+							<td style="color: white" data-th="Quantity">
 							 <c:url var="action" value="editorder/${cart.id}"></c:url>
 		                       <form:form action="${action}" name="formID" modelAttribute="cart" method="post">
-								<form:input type="number" class="form-control text-center" path="quantity" id="sel1" name="quantity" onchange="checkAndSubmit()" />
+								<form:input type="number" min="1" class="form-control text-center" path="quantity" id="sel1" name="quantity" onchange="checkAndSubmit()" />
 								</form:form>
 							</td>
 							<%-- <td data-th="Subtotal" class="text-center"><c:out value="${cart.subtotal}"/></td> --%>
-							<td style="color: red" class="actions" data-th="">
+							<td style="color: white" class="actions" data-th="">
 								<a href="delete/${cart.id}"><button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button></a>								
 							</td>
 						</tr>
@@ -67,28 +67,15 @@
 						<tr>
 							<td><a href="Home" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
 							<td colspan="2" class="hidden-xs"></td>
-							<td style="color: red" class="hidden-xs text-center"><strong>Total:Rs <c:out value="${cartprice}"></c:out> /-</strong></td>
+							<td style="color: white" class="hidden-xs text-center"><strong>Total:Rs <c:out value="${cartprice}"></c:out> /-</strong></td>
+							<c:if test="${cartprice>0}">
 							<td><a href="checkoutFlow" class="btn btn-success btn-block">Checkout <i class="fa fa-angle-right"></i></a></td>
+							</c:if>
 						</tr>
 					</tfoot>
 				</table>
 </div>
-
-
-
  
-<%-- <form:select >
-<form:option value="1">1</form:option>
-<form:option value="2">2</form:option>
-<form:option value="3">3</form:option>
-<form:option value="4">4</form:option>
-<form:option value="5">5</form:option>
-<form:option value="6">6</form:option>
-<form:option value="7">7</form:option>
-<form:option value="8">8</form:option>
-<form:option value="9">9</form:option>
-<form:option value="10">10</form:option>
-</form:select> --%>
 <script type="text/javascript">
 function checkAndSubmit()
 {

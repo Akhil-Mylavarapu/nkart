@@ -17,12 +17,9 @@ import org.springframework.web.servlet.ModelAndView;
 import com.nkart.shoppingcart.dao.CartDAO;
 import com.nkart.shoppingcart.dao.CategoryDAO;
 import com.nkart.shoppingcart.dao.ProductDAO;
+import com.nkart.shoppingcart.dao.impl.CartDAOImpl;
 import com.nkart.shoppingcart.domain.Cart;
 import com.nkart.shoppingcart.domain.Product;
-
-
-
-
 
 @Controller
 public class CartController {
@@ -134,26 +131,28 @@ public class CartController {
 	 }
 	 
 	 @RequestMapping("placeorder")
-	 public String placeorder(Model model)
+	 public String placeorder(Model model,@ModelAttribute("cart")Cart cart,BindingResult result,@PathVariable("userid") int userid)
 	 {
 		 log.info("Starting of the method placeOrder");
 	  model.addAttribute("IfPaymentClicked", "true");
 	  model.addAttribute("HideOthers","true");
+	  
 	  log.info("Ending of the method placeOrder");
 	  return "Payment";
 	 }
 
 	 @RequestMapping("pay")
-	 public String payment(HttpSession session) {
+	 public String payment(HttpSession session,@ModelAttribute("cart")Cart cart,BindingResult result,@PathVariable("userid") int userid) {
 		 log.info("Starting of the method payment");
 		 cartDAO.pay((Integer) session.getAttribute("userid"));
+		 cartDAO.pay(userid);
 		 log.info("Ending of the method payment");
 	  return "Home";
 	 }
 	 @RequestMapping("tqpage")
-	 public String tqpage(HttpSession session) {
+	 public String tqpage(HttpSession session,@ModelAttribute("cart")Cart cart,BindingResult result,@PathVariable("userid") int userid) {
 		 log.info("Starting of the tqpage");
-		/* cartDAO.pay((Integer) session.getAttribute("userid"));*/
+	cartDAO.pay(userid);
 		 log.info("Ending of the tqpage");
 	  return "tqpage";
 	 }

@@ -17,29 +17,21 @@
 </head>
 
 <body>
-	<nav class="navbar navbar-inverse">
+	<nav class="navbar navbar-inverse navbar-fixed">
 		<div class="container-fluid">
-		
+
 
 			<ul class="nav navbar-nav dropdown ">
 				<li><a href="Home"> <span class="glyphicon glyphicon-home"></span>Home
 				</a></li>
 			</ul>
-<ul class="nav navbar-nav" role="tablist">
-<c:forEach items="${categoryList}" var="category">
-<li class="dropdown"><a class="dropdown-toggle" href="navproducts/${category.id}">${category.name}</a>
-</li>
-</c:forEach>
+			<ul class="nav navbar-nav" role="tablist">
+				<c:forEach items="${categoryList}" var="category">
+					<li class="dropdown"><a class="dropdown-toggle"
+						href="navproducts/${category.id}">${category.name}</a></li>
+				</c:forEach>
 
-</ul>
-
-
-
-			
-
-			
-
-
+			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="#">${LoginMessage}</a></li>
 			</ul>
@@ -84,7 +76,7 @@
 								class="glyphicon glyphicon-log-out"></span> Logout</a></li>
 
 
-						<li><a href="userdetails"> <span
+						<li><a href="#"> <span
 								class="glyphicon glyphicon-user"></span>Hi <sec:authentication
 									property="principal.username" /></a></li>
 						<li class="nav navbar-nav">
@@ -93,14 +85,9 @@
 
 					</sec:authorize>
 				</ul>
-
-
-
-
-
 			</div>
 		</div>
-		</div>
+
 
 	</nav>
 
