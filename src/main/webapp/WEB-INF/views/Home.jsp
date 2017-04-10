@@ -49,7 +49,7 @@
 
 		</center>
 		<%-- <jsp:include page="Admin/AdminHome.jsp"></jsp:include> --%>
-		<jsp:include page="menu/AdminCategoryMenu.jsp"></jsp:include>
+		<%-- <jsp:include page="menu/AdminCategoryMenu.jsp"></jsp:include> --%>
 	</c:if>
 	<c:if test="${isUserClickedRegistration==true}">
 		<jsp:forward page="Registration.jsp"></jsp:forward>

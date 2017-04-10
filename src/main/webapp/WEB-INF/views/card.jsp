@@ -20,7 +20,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   
-  
+  <c:url var="back" value="resources/images/try.jpg"></c:url>
+<body style=" background-image: url(${back});background-repeat: no-repeat;
+    background-attachment: fixed">
  
 </head>
 <body  style="background-color:#ffffff;">

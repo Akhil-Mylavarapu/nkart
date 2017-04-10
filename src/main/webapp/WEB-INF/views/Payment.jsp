@@ -25,6 +25,9 @@ body {
 width:100%;
 }
   </style>
+  <c:url var="back" value="resources/images/try.jpg"></c:url>
+<body style=" background-image: url(${back});background-repeat: no-repeat;
+    background-attachment: fixed">
 </head>
 <body  style="background-color:#ffffff;">
 <center>

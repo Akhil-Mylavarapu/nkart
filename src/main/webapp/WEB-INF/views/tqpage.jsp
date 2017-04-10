@@ -26,6 +26,9 @@ width:100%;
 }
 .glyphicon-ok { color:green; }
   </style>
+  <c:url var="back" value="resources/images/try.jpg"></c:url>
+<body style=" background-image: url(${back});background-repeat: no-repeat;
+    background-attachment: fixed">
 </head>
 <body  style="background-color:#ffffff;">
 
@@ -70,9 +73,9 @@ width:100%;
   <br>
   <br>
   <div style="text-align:center;padding-top:40px;padding-bottom:40px">
-  <h1> Thank You!!</h1>
-  <h3>your payment has been received <span class="glyphicon glyphicon-ok"></span></h3>
-  <img src="resources/images/tqpage.jpg" class="img-rounded" alt="tq" width="304" height="236"> 
+  <h1 style="color: white"> Thank You!!</h1>
+  <h3 style="color: white" >your payment has been received <span class="glyphicon glyphicon-ok"></span></h3>
+  <img src="resources/images/tq.jpg" class="img-rounded" alt="tq" width="304" height="236"> 
   </div>
    
 </body>
