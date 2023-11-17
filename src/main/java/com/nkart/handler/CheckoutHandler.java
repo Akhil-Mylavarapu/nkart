@@ -19,7 +19,7 @@ public class CheckoutHandler {
 		System.out.println("method");
 		String method = cart.getMethod();
 		System.out.println(method);
-		if (method.equals("cod"))
+		if ("cod".equals(method))
 
 		{
 
