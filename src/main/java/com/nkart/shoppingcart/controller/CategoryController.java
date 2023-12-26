@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -28,7 +29,7 @@ public class CategoryController {
 
 	// CRUD operations
 
-	@RequestMapping(value = "/manage_create_category", method = RequestMethod.POST)
+	@PostMapping(value = "/manage_create_category")
 	public String createCategory(@ModelAttribute("category") Category category, Model model) {
 		log.debug(" Starting of the method createCategory");
 		log.info("id:" + category.getId());
@@ -60,7 +61,7 @@ public class CategoryController {
 
 	}
 
-	@RequestMapping(value = "/manage_Edit_Category/{id}", method = RequestMethod.GET)
+	@GetMapping(value = "/manage_Edit_Category/{id}")
 	public String editCategory(@PathVariable("id") int id, RedirectAttributes attributes)
 	{
 		log.debug("Starting of the method editCategory");

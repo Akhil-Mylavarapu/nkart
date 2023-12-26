@@ -5,8 +5,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -30,7 +32,7 @@ public class SupplierController {
 	
 
 
-	@RequestMapping(value = "/manage_create_supplier", method = RequestMethod.POST)
+	@PostMapping(value = "/manage_create_supplier")
 	public String createSupplier(@ModelAttribute("supplier") Supplier supplier, Model model) {
 
 		log.debug(" Starting of the method createSupplier");
@@ -71,7 +73,7 @@ public class SupplierController {
 		return "redirect:/manage_Suppliers";
 	}
 
-	@RequestMapping(value="/manage_Edit_Supplier/{id}", method = RequestMethod.GET)
+	@GetMapping(value="/manage_Edit_Supplier/{id}")
 	public String editSupplier(@PathVariable("id") int id,RedirectAttributes attributes) {
 		log.debug("Starting of the method editSupplier");
 			supplier.setId(id);	

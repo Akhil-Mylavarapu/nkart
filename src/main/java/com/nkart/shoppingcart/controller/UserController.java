@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -21,7 +22,7 @@ public class UserController
 	@Autowired
 	private UserDAO userDAO;
  
-	@RequestMapping(value = "/Registration", method = RequestMethod.POST)
+	@PostMapping(value = "/Registration")
 	public String registerUser(@ModelAttribute User user,Model model) {
 		log.debug("Starting of the method registerUser");
 		/* ModelAndView mv = new ModelAndView("Home");*/

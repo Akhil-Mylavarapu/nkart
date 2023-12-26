@@ -13,6 +13,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -43,7 +44,7 @@ public class SpringController {
 	private Authentication auth;
 
 	// authentication-failure-forward-url="/loginError"
-	@RequestMapping(value = "/loginError", method = RequestMethod.GET)
+	@GetMapping(value = "/loginError")
 	public String loginError(Model model) {
 		log.debug("Starting of the method loginError");
 		model.addAttribute("errorMessage", "Invalid Credentials.  Please try again.");
@@ -54,7 +55,7 @@ public class SpringController {
 	}
 
 	// <security:access-denied-handler error-page="/accessDenied" />
-	@RequestMapping(value = "/accessDenied", method = RequestMethod.GET)
+	@GetMapping(value = "/accessDenied")
 	public String accessDenied(Model model) {
 		log.debug("Starting of the method accessDenied");
 		model.addAttribute("errorMessage", "You are not authorized to access this page");
